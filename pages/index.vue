@@ -1,5 +1,5 @@
 <template>
-  <h1 class="!text-9xl font-bold underline bg-[coral]">
+  <h1 class="text-9xl font-bold underline bg-[coral]">
     Index
   </h1>
 
