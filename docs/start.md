@@ -6,7 +6,7 @@
 <text x="70" y="75" font-family="Arial" font-size="16" fill="#1e293b">Logo | Hem | Tjänster | Kontakta oss</text>
 <!-- Hero Section -->
 <rect x="50" y="130" width="900" height="140" rx="5" fill="#dbeafe"/>
-<text x="70" y="180" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">Säkra Besiktningar</text>
+<text x="70" y="180" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">Säkra besiktningar</text>
 <text x="70" y="215" font-family="Arial" font-size="18" fill="#64748b"> -Ackrediterad besiktning</text>
 <!-- USP Section -->
 <rect x="50" y="290" width="280" height="160" rx="5" fill="#bfdbfe"/>
