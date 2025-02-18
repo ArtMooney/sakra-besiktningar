@@ -62,7 +62,7 @@
 <text x="70" y="1085" font-family="Arial" font-size="14" fill="#64748b">• Vi utför även frivillig besiktning av kranar med maxlast understigande 500 kg för att ni ska uppfylla kravet på periodisk kontroll och</text>
 <text x="70" y="1105" font-family="Arial" font-size="14" fill="#64748b">bidra till en säkrare arbetsplats. (Besiktningstjänsten faller inte under företagets ackreditering av Swedac då besiktningen är frivillig.)</text>
 <!-- Övriga tjänster -->
-<rect x="50" y="1150" width="900" height="410" rx="5" fill="#dbeafe"/>
+<rect x="50" y="1150" width="900" height="510" rx="5" fill="#dbeafe"/>
 <text x="70" y="1180" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Övriga besiktningstjänster</text>
 <text x="70" y="1215" font-family="Arial" font-size="16" fill="#1e293b">Lingångar och punktlyftar</text>
 <text x="70" y="1245" font-family="Arial" font-size="14" fill="#64748b">• Besiktningskrav enligt AFS 2023:11</text>
@@ -77,14 +77,14 @@
 <text x="70" y="1480" font-family="Arial" font-size="14" fill="#64748b">• Inget besiktningskrav men krav finns på periodisk kontroll. (Besiktningstjänsten faller inte under företagets ackreditering av</text>
 <text x="70" y="1500" font-family="Arial" font-size="14" fill="#64748b">Swedac då besiktningen är frivillig.)</text>
 <text x="70" y="1525" font-family="Arial" font-size="14" fill="#64748b">• Lämpligt intervall 12 månader</text>
+<text x="70" y="1560" font-family="Arial" font-size="16" fill="#1e293b">Övriga personlyftande anordningar</text>
+<text x="70" y="1585" font-family="Arial" font-size="14" fill="#64748b">• Besiktningskrav enligt AFS 2023:11</text>
+<text x="70" y="1610" font-family="Arial" font-size="14" fill="#64748b">• Intervall 12 månader</text>
+<text x="70" y="1635" font-family="Arial" font-size="14" fill="#64748b">• Undantagna kravet på besiktning är övriga lyftanordningar med en lyfthöjd understigande 0,5 meter</text>
 <!-- Ytterligare tjänster -->
-<rect x="50" y="1580" width="900" height="200" rx="5" fill="#bfdbfe"/>
-<text x="70" y="1610" font-family="Arial" font-size="16" fill="#1e293b">Övriga personlyftande anordningar</text>
-<text x="70" y="1635" font-family="Arial" font-size="14" fill="#64748b">• Besiktningskrav enligt AFS 2023:11</text>
-<text x="70" y="1655" font-family="Arial" font-size="14" fill="#64748b">• Intervall 12 månader</text>
-<text x="70" y="1675" font-family="Arial" font-size="14" fill="#64748b">• Undantagna kravet på besiktning är övriga lyftanordningar med en lyfthöjd understigande 0,5 meter</text>
-<text x="70" y="1720" font-family="Arial" font-size="16" fill="#1e293b">Hissar</text>
-<text x="70" y="1745" font-family="Arial" font-size="14" fill="#64748b">• Återkommande besiktning av hissar så som personhissar, varuhissar eller plattformshissar med mera</text>
+<rect x="50" y="1680" width="900" height="90" rx="5" fill="#bfdbfe"/>
+<text x="70" y="1710" font-family="Arial" font-size="16" fill="#1e293b">Hissar</text>
+<text x="70" y="1735" font-family="Arial" font-size="14" fill="#64748b">• Återkommande besiktning av hissar så som personhissar, varuhissar eller plattformshissar med mera</text>
 !-- Connecting Lines -->
 <line x1="500" y1="350" x2="500" y2="370" stroke="#94a3b8" stroke-width="2"/>
 <line x1="500" y1="550" x2="500" y2="570" stroke="#94a3b8" stroke-width="2"/>
