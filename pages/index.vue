@@ -1,18 +1,33 @@
 <template>
-  <h1 class="text-9xl font-bold underline bg-[coral]">
-    Index
-  </h1>
-
-  <img src="../assets/images/Köpt%20Mostphoto.jpg">
+  <div class="w-full h-screen">
+    <img
+      src="../assets/images/sky_3000px.jpg"
+      class="object-cover w-full h-full"
+    />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'StartPage',
+  name: "StartPage",
   setup() {
     definePageMeta({
-      ssr: true
-    })
-  }
-}
+      ssr: true,
+    });
+  },
+
+  methods: {
+    handleScroll() {
+      const scrolled = window.scrollY;
+      const parallaxElements = document.querySelectorAll(
+        ".parallax-background",
+      );
+      parallaxElements.forEach(function (el) {
+        const rate = 0.25;
+        const translateY = scrolled * rate;
+        el.style.transform = `translateY(${translateY}px)`;
+      });
+    },
+  },
+};
 </script>
