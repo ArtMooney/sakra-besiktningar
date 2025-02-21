@@ -8,18 +8,26 @@
       />
     </div>
 
+    <div class="absolute inset-0 flex items-center overflow-hidden">
+      <img
+        src="../assets/images/flat_clouds.png"
+        alt=""
+        class="parallax-clouds h-full w-full"
+      />
+    </div>
+
     <img
-      src="../assets/images/kund/hiss_fri.png"
+      src="../assets/images/hiss_fri.png"
       class="object-contain w-full h-full relative"
     />
 
     <img
-      src="../assets/images/kund/hiss_fri.png"
+      src="../assets/images/hiss_fri.png"
       class="object-contain w-full h-full relative"
     />
 
     <img
-      src="../assets/images/kund/hiss_fri.png"
+      src="../assets/images/hiss_fri.png"
       class="object-contain w-full h-full relative"
     />
   </div>
@@ -41,7 +49,17 @@ export default {
         ".parallax-background",
       );
       parallaxElements.forEach(function (el) {
-        const rate = 0.2;
+        const rate = 0.25;
+        const translateY = scrolled * rate;
+        el.style.transform = `translateY(${translateY}px)`;
+      });
+    },
+
+    handleScrollClouds() {
+      const scrolled = window.scrollY;
+      const parallaxElements = document.querySelectorAll(".parallax-clouds");
+      parallaxElements.forEach(function (el) {
+        const rate = 0.15;
         const translateY = scrolled * rate;
         el.style.transform = `translateY(${translateY}px)`;
       });
@@ -50,10 +68,12 @@ export default {
 
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScrollClouds);
   },
 
   beforeUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("scroll", this.handleScrollClouds);
   },
 };
 </script>
