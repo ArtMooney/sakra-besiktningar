@@ -46,20 +46,11 @@ export default {
     handleScroll() {
       const scrolled = window.scrollY;
       const parallaxElements = document.querySelectorAll(
-        ".parallax-background",
+        ".parallax-background, .parallax-clouds",
       );
-      parallaxElements.forEach(function (el) {
-        const rate = 0.25;
-        const translateY = scrolled * rate;
-        el.style.transform = `translateY(${translateY}px)`;
-      });
-    },
 
-    handleScrollClouds() {
-      const scrolled = window.scrollY;
-      const parallaxElements = document.querySelectorAll(".parallax-clouds");
-      parallaxElements.forEach(function (el) {
-        const rate = 0.15;
+      parallaxElements.forEach(function (el, index) {
+        const rate = index === 0 ? 0.4 : 0.2;
         const translateY = scrolled * rate;
         el.style.transform = `translateY(${translateY}px)`;
       });
@@ -68,12 +59,10 @@ export default {
 
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
-    window.addEventListener("scroll", this.handleScrollClouds);
   },
 
   beforeUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
-    window.removeEventListener("scroll", this.handleScrollClouds);
   },
 };
 </script>
