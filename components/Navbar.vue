@@ -2,13 +2,13 @@
 import Button from "./elements/Button.vue";
 import imageLogo from "../assets/images/färdig jpeg.png";
 import { IonIcon } from "@ionic/vue";
-import { menuOutline } from "ionicons/icons";
+import { menuOutline, closeOutline } from "ionicons/icons";
 </script>
 
 <template>
   <div
     id="navbar"
-    class="relative z-10 flex items-center justify-between bg-white p-4 py-2 font-gunplay"
+    class="font-gunplay relative z-10 flex items-center justify-between bg-white p-4 py-2"
   >
     <router-link to="/">
       <img :src="imageLogo" alt="navbar logo" class="h-auto w-24 md:w-32" />
@@ -18,13 +18,21 @@ import { menuOutline } from "ionicons/icons";
       <ion-icon
         @click="showNavbar = !showNavbar"
         :icon="menuOutline"
-        class="h-10 w-10 md:hidden block"
+        class="block h-8 w-8 md:hidden"
       ></ion-icon>
     </ClientOnly>
 
     <div
-      class="absolute inset-0 top-32 text-center flex flex-col gap-5 bg-white p-6 pt-14 md:static md:flex-row md:items-center md:bg-transparent md:p-0"
+      v-if="showNavbar"
+      class="fixed top-0 right-0 bottom-0 left-0 flex flex-col justify-center gap-5 bg-white p-4 pb-10 text-center md:static md:flex-row md:items-center md:bg-transparent md:p-0"
     >
+      <ClientOnly>
+        <ion-icon
+          @click="showNavbar = !showNavbar"
+          :icon="closeOutline"
+          class="absolute top-4 right-4 h-8 w-8 cursor-pointer"
+        ></ion-icon>
+      </ClientOnly>
       <NuxtLink to="/" class="hover:underline"> Hem</NuxtLink>
       <NuxtLink to="/" class="hover:underline">Services</NuxtLink>
       <Button text="Kontakta" link="/contact" type="button" />
