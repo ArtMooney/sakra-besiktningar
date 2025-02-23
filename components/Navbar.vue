@@ -23,8 +23,8 @@ import { menuOutline, closeOutline } from "ionicons/icons";
     </ClientOnly>
 
     <div
-      v-if="showNavbar"
       class="fixed top-0 right-0 bottom-0 left-0 flex flex-col justify-center gap-5 bg-white p-4 pb-10 text-center md:static md:flex-row md:items-center md:bg-transparent md:p-0"
+      :class="showNavbar ? 'absolute md:flex' : 'hidden md:flex'"
     >
       <ClientOnly>
         <ion-icon
