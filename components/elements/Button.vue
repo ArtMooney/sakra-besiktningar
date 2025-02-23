@@ -1,13 +1,13 @@
 <template>
   <button
-    @click="$router.push({ path: link, hash: hash })"
-    class="min-w-40 rounded px-6 py-3 text-center font-gunplay text-sm uppercase text-black no-underline duration-200 hover:scale-[1.02]"
+    @click="navigateTo({ path: link, hash: hash })"
+    class="min-w-40 rounded px-6 py-3 text-center font-gunplay text-sm text-black no-underline duration-200 hover:underline"
     :class="[
-      styling === 'dark' ? 'bg-[#5e5e5e] text-white' : 'bg-white/95',
+      styling === 'dark' ? 'bg-neutral-900 text-white' : 'bg-white/95',
       outline
         ? styling === 'dark'
           ? 'border-2 border-white'
-          : 'border-2 border-[#5e5e5e]'
+          : 'border-2 border-neutral-900'
         : '',
     ]"
     :type="type"
@@ -41,12 +41,13 @@ export default {
     },
     dataWait: {
       type: String,
-      required: true,
+      required: false,
+      default: "",
     },
     styling: {
       type: String,
       required: false,
-      default: "light",
+      default: "dark",
     },
     outline: {
       type: Boolean,
