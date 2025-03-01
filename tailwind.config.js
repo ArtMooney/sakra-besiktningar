@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        gunplay: ["Gunplay", "sans-serif"],
-        libre: ["Libre Franklin", "sans-serif"],
+        heading: ["Hanuman", "sans-serif"],
+        body: ["Poppins", "sans-serif"],
       },
     },
   },
@@ -14,11 +14,11 @@ export default {
     plugin(function ({ addBase }) {
       addBase({
         body: {
-          "@apply mx-auto w-full max-w-screen-2xl bg-white font-libre font-normal text-black":
+          "@apply mx-auto w-full max-w-screen-2xl bg-white font-body font-normal text-black":
             {},
         },
         "h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6": {
-          "@apply mb-4 mt-0 font-gunplay font-bold leading-none": {},
+          "@apply mb-4 mt-0 font-body font-heading leading-none": {},
         },
 
         "h1, .h1": {
