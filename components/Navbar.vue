@@ -19,7 +19,7 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 
     <Bars2Icon
       @click="showNavbar = !showNavbar"
-      class="block h-8 w-8 md:hidden"
+      class="block h-8 w-8 cursor-pointer md:hidden"
     />
 
     <div
@@ -30,6 +30,7 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
         @click="showNavbar = !showNavbar"
         class="absolute top-4 right-4 h-8 w-8 cursor-pointer"
       />
+      
       <NuxtLink to="/" class="hover:underline"> Hem</NuxtLink>
       <NuxtLink to="/" class="hover:underline">Tjänster</NuxtLink>
       <Button text="Kontakta oss" link="/contact" type="button" />
