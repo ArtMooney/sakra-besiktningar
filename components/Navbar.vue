@@ -34,8 +34,8 @@ import { menuOutline, closeOutline } from "ionicons/icons";
         ></ion-icon>
       </ClientOnly>
       <NuxtLink to="/" class="hover:underline"> Hem</NuxtLink>
-      <NuxtLink to="/" class="hover:underline">Services</NuxtLink>
-      <Button text="Kontakta" link="/contact" type="button" />
+      <NuxtLink to="/" class="hover:underline">Tjänster</NuxtLink>
+      <Button text="Kontakta oss" link="/contact" type="button" />
     </div>
   </div>
 </template>
