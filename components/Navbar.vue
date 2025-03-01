@@ -27,10 +27,11 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
       :class="showNavbar ? 'absolute md:flex' : 'hidden md:flex'"
     >
       <XMarkIcon
+        v-if="showNavbar"
         @click="showNavbar = !showNavbar"
         class="absolute top-4 right-4 h-8 w-8 cursor-pointer"
       />
-      
+
       <NuxtLink to="/" class="hover:underline"> Hem</NuxtLink>
       <NuxtLink to="/" class="hover:underline">Tjänster</NuxtLink>
       <Button text="Kontakta oss" link="/contact" type="button" />
