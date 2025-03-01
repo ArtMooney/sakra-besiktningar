@@ -11,7 +11,11 @@ import { menuOutline, closeOutline } from "ionicons/icons";
     class="font-gunplay relative z-10 flex items-center justify-between bg-white p-4 py-2"
   >
     <router-link to="/">
-      <img :src="imageLogo" alt="navbar logo" class="h-auto w-24 md:w-32" />
+      <img
+        :src="imageLogo"
+        alt="navbar logo"
+        class="h-auto w-24 p-1 md:w-32 md:p-2"
+      />
     </router-link>
 
     <ClientOnly>
