@@ -4,7 +4,7 @@
       <img
         src="../assets/images/sky_3000px.jpg"
         alt=""
-        class="parallax-background h-full w-full"
+        class="parallax-background h-full w-full object-cover"
       />
     </div>
 
@@ -12,23 +12,20 @@
       <img
         src="../assets/images/flat_clouds.png"
         alt=""
-        class="parallax-clouds h-full w-full"
+        class="parallax-clouds h-full w-full object-cover"
       />
+    </div>
+
+    <div
+      class="relative flex h-[60vh] flex-col items-center justify-center px-8 text-white"
+    >
+      <h1 class="text-6xl">Säkra besiktningar</h1>
+      <p>-Ackrediterad besiktning</p>
     </div>
 
     <img
       src="../assets/images/hiss_fri.png"
-      class="object-contain w-full h-full relative"
-    />
-
-    <img
-      src="../assets/images/hiss_fri.png"
-      class="object-contain w-full h-full relative"
-    />
-
-    <img
-      src="../assets/images/hiss_fri.png"
-      class="object-contain w-full h-full relative"
+      class="relative h-full w-full object-cover"
     />
   </div>
 </template>
