@@ -24,7 +24,7 @@
     </div>
 
     <img
-      src="../assets/images/hiss_fri.png"
+      src="../assets/images/skylift.png"
       class="relative h-full w-full min-w-[200vw] -translate-x-20 object-cover sm:min-w-0 sm:translate-x-0"
     />
 

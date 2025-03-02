@@ -1,13 +1,13 @@
 <script setup>
 import Button from "./elements/Button.vue";
-import imageLogo from "../assets/images/färdig jpeg.png";
+import imageLogo from "assets/images/sakra-logo.png";
 import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 </script>
 
 <template>
   <div
     id="navbar"
-    class="font-gunplay relative z-10 flex items-center justify-between bg-white p-4 py-2"
+    class="relative z-10 flex items-center justify-between bg-white p-4 py-2"
   >
     <router-link to="/">
       <img

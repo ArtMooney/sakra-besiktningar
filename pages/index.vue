@@ -6,6 +6,7 @@ import Home from "../components/Home.vue";
 <template>
   <Navbar />
   <Home />
+  <Footer />
 </template>
 
 <script>
