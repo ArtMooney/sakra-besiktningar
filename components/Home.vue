@@ -64,7 +64,7 @@
     </div>
 
     <div
-      class="relative right-0 z-1 mt-40 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0 md:mt-52"
+      class="relative right-0 z-1 mt-96 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
     >
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-2/3"
@@ -80,7 +80,7 @@
 
     <img
       src="../assets/images/green-lift.png"
-      class="absolute bottom-0 h-auto w-[27.5rem]"
+      class="absolute bottom-0 -left-30 h-auto w-[34rem] min-w-[34rem] sm:left-0"
     />
   </div>
 </template>
