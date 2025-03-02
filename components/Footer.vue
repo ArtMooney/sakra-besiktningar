@@ -9,7 +9,7 @@ import imageLogo from "assets/images/sakra-logo.png";
       <img
         :src="imageLogo"
         alt="footer logo"
-        class="relative mr-2 mb-3 h-auto w-32"
+        class="relative mr-2 mb-4 h-auto w-32"
       />
     </router-link>
 
@@ -24,7 +24,7 @@ import imageLogo from "assets/images/sakra-logo.png";
     <div class="my-4 w-1/3 border-t border-gray-300"></div>
 
     <a
-      class="bottom-3 col-span-1 flex text-xs opacity-50 hover:text-black/75 md:col-span-3"
+      class="bottom-3 col-span-1 flex text-xs opacity-40 hover:text-black/75 md:col-span-3"
       href="https://www.framecore.se"
       target="_blank"
     >

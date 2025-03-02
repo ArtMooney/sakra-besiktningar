@@ -29,10 +29,10 @@
     />
 
     <div
-      class="relative mt-20 grid place-items-center px-4 text-left sm:mt-12 sm:grid-cols-2 sm:px-8"
+      class="relative right-0 mt-20 grid place-items-end px-4 text-left sm:mt-12 sm:grid-cols-2 sm:px-0"
     >
       <div
-        class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-96"
+        class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-[34rem]"
       >
         <p class="font-bold">Besiktning</p>
         <p>
@@ -50,10 +50,10 @@
     />
 
     <div
-      class="relative -mt-20 grid place-items-center px-4 text-left sm:grid-cols-2 sm:px-8 md:-mt-48 lg:-mt-[32rem]"
+      class="relative left-0 -mt-24 grid place-items-start px-4 text-left sm:grid-cols-2 sm:px-0 md:-mt-96 lg:-mt-[32rem]"
     >
       <div
-        class="flex flex-col gap-2 bg-white p-8 sm:col-start-1 sm:col-end-1 sm:max-w-96"
+        class="flex flex-col gap-2 bg-white p-8 sm:col-start-1 sm:col-end-1 sm:max-w-[34rem]"
       >
         <p class="font-bold">Lokal Partner</p>
         <p>
@@ -64,10 +64,10 @@
     </div>
 
     <div
-      class="relative mt-20 grid place-items-center px-4 text-left sm:mt-12 sm:grid-cols-2 sm:px-8"
+      class="relative right-0 mt-40 grid place-items-end px-4 text-left sm:grid-cols-2 sm:px-0 md:mt-52"
     >
       <div
-        class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-96"
+        class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-[34rem]"
       >
         <p class="font-bold">Personlig Service</p>
         <p>
