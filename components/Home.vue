@@ -1,5 +1,5 @@
 <template>
-  <div class="relative pb-96">
+  <div class="relative overflow-hidden pb-96">
     <div class="absolute inset-0 flex items-center overflow-hidden">
       <img
         src="../assets/images/sky_3000px.jpg"
