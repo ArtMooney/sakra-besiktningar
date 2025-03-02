@@ -44,8 +44,13 @@
       </div>
     </div>
 
+    <img
+      src="../assets/images/hookblock-rotated.png"
+      class="relative -mt-20 h-auto w-full object-cover md:-mt-96"
+    />
+
     <div
-      class="relative mt-20 grid place-items-center px-4 text-left sm:mt-12 sm:grid-cols-2 sm:px-8"
+      class="relative -mt-20 grid place-items-center px-4 text-left sm:grid-cols-2 sm:px-8 md:-mt-48 lg:-mt-[32rem]"
     >
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-1 sm:col-end-1 sm:max-w-96"
