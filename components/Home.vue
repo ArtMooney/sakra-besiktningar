@@ -1,3 +1,7 @@
+<script setup>
+import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
+</script>
+
 <template>
   <div class="relative overflow-hidden pb-96">
     <div class="absolute inset-0 flex items-center overflow-hidden">
@@ -82,15 +86,31 @@
       src="../assets/images/green-lift.png"
       class="absolute bottom-0 -left-30 h-auto w-[34rem] min-w-[34rem] sm:left-0"
     />
+
+    <ChevronDoubleDownIcon
+      class="fixed bottom-4 left-4 h-12 w-12 text-white transition-opacity duration-500 ease-in-out"
+      :class="[fadeOutDownIcon && 'opacity-0']"
+    />
   </div>
 </template>
 
 <script>
 export default {
   name: "Home",
+
+  data() {
+    return {
+      fadeOutDownIcon: false,
+    };
+  },
+
   methods: {
     handleScroll() {
       const scrolled = window.scrollY;
+      if (scrolled > 500) {
+        this.fadeOutDownIcon = true;
+      }
+
       const parallaxElements = document.querySelectorAll(
         ".parallax-background, .parallax-clouds",
       );
