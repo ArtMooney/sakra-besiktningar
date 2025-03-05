@@ -5,16 +5,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 <template>
   <div>
     <ServicesTop />
-    <div class="bg-white p-12">
-      <img
-        src="../assets/images/green-skylifts.jpg"
-        class="relative h-auto w-full"
-      />
-    </div>
     <ServicesBottom />
-    <div class="bg-white p-12">
-      <img src="../assets/images/portar.jpg" class="relative h-auto w-full" />
-    </div>
 
     <ChevronDoubleDownIcon
       class="fixed bottom-4 left-4 h-12 w-12 text-white transition-opacity duration-500 ease-in-out"

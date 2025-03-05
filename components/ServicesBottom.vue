@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden">
+  <div class="relative mt-20 overflow-hidden">
     <div
       class="relative mb-8 grid min-h-96 w-full items-center gap-8 px-4 text-white lg:grid-cols-2 lg:px-8"
     >
@@ -42,7 +42,10 @@
         </ul>
       </div>
 
-      <img src="../assets/images/portar.jpg" class="relative h-auto w-full" />
+      <img
+        src="../assets/images/green-skylifts.jpg"
+        class="relative h-auto w-full"
+      />
     </div>
 
     <div
@@ -93,25 +96,28 @@
       </div>
 
       <img
-        src="../assets/images/hiss.jpg"
-        class="relative h-full w-auto object-cover lg:order-first"
+        src="../assets/images/portar.jpg"
+        class="relative h-full w-auto object-cover lg:order-first lg:py-44"
       />
     </div>
 
-    <!--    <ul class="flex flex-col space-y-4">-->
-    <!--      <li class="leading-normal"></li>-->
-    <!--    </ul>-->
-
     <div
-      class="relative flex min-h-96 w-full items-center justify-start bg-[skyblue] text-white"
+      class="relative grid w-full items-center gap-8 px-4 text-white lg:px-8"
     >
-      <div class="flex flex-col gap-2 p-8">
+      <div class="flex flex-col bg-black p-8">
         <h4 class="font-bold">Hissar</h4>
-        <p>
-          • Återkommande besiktning av hissar så som personhissar, varuhissar
-          eller plattformshissar med mera<br />
-        </p>
+
+        <ul class="flex flex-col space-y-4">
+          <li class="leading-normal">
+            • Återkommande besiktning av hissar så som personhissar, varuhissar
+            eller plattformshissar med mera
+          </li>
+        </ul>
       </div>
+    </div>
+
+    <div class="bg-white p-12">
+      <img src="../assets/images/hiss.jpg" class="relative h-auto w-full" />
     </div>
   </div>
 </template>
