@@ -27,7 +27,7 @@
     <!--      class="relative h-full w-full min-w-[200vw] -translate-x-20 object-cover sm:min-w-0 sm:translate-x-0"-->
     <!--    />-->
 
-    <div class="relative right-0 flex justify-end pl-4 text-left sm:px-0">
+    <div class="relative right-0 mb-20 flex justify-end pl-4 text-left sm:px-0">
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-[95%]"
       >
@@ -52,7 +52,7 @@
     <!--    />-->
 
     <div
-      class="relative left-0 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
+      class="relative left-0 mb-20 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
     >
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-1 sm:col-end-1 sm:max-w-2/3"
@@ -69,7 +69,7 @@
     </div>
 
     <div
-      class="relative right-0 z-1 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
+      class="relative right-0 z-1 mb-20 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
     >
       <div class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2">
         <h4 class="font-bold">Mobila arbetsplattformar</h4>
@@ -83,7 +83,7 @@
     </div>
 
     <div
-      class="relative left-0 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
+      class="relative left-0 mb-20 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
     >
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-1 sm:col-end-1 sm:max-w-2/3"
@@ -102,9 +102,11 @@
     </div>
 
     <div
-      class="relative right-0 z-1 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
+      class="relative right-0 z-1 mb-20 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
     >
-      <div class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2">
+      <div
+        class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-2/3"
+      >
         <h4 class="font-bold">Fordonslyftar</h4>
         <p>
           • Besiktningskrav enligt AFS 2023:11<br />
