@@ -33,7 +33,7 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
       />
 
       <NuxtLink to="/" class="hover:underline"> Hem</NuxtLink>
-      <NuxtLink to="/" class="hover:underline">Tjänster</NuxtLink>
+      <NuxtLink to="/tjanster" class="hover:underline">Tjänster</NuxtLink>
       <Button text="Kontakta oss" link="/contact" type="button" />
     </div>
   </div>
