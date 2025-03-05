@@ -6,7 +6,10 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
   <div>
     <ServicesTop />
     <div class="bg-white p-12">
-      <img src="../assets/images/hiss.jpg" class="relative h-auto w-full" />
+      <img
+        src="../assets/images/green-skylifts.jpg"
+        class="relative h-auto w-full"
+      />
     </div>
     <ServicesBottom />
     <div class="bg-white p-12">
