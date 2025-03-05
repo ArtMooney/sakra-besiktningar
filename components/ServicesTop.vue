@@ -2,7 +2,7 @@
   <div class="relative overflow-hidden pb-32">
     <div class="absolute inset-0 flex items-center overflow-hidden">
       <img
-        src="../assets/images/tractor-in-field.jpg"
+        src="../assets/images/futuristic-elevator.jpg"
         alt=""
         class="parallax-background -mt-12 h-full w-full object-cover"
       />
