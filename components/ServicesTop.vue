@@ -14,7 +14,9 @@
       <h2 class="text-4xl md:text-6xl">Besiktning av</h2>
     </div>
 
-    <div class="relative right-0 mb-96 flex justify-end pl-4 text-left sm:px-0">
+    <div
+      class="parallax-text1 relative right-0 mb-96 flex justify-end pl-4 text-left sm:px-0"
+    >
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-[95%]"
       >
@@ -43,7 +45,7 @@
     </div>
 
     <div
-      class="relative left-0 mb-96 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
+      class="parallax-text2 relative left-0 mb-96 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
     >
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-1 sm:col-end-1 sm:max-w-2/3"
@@ -64,7 +66,7 @@
     </div>
 
     <div
-      class="relative right-0 z-1 mb-96 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
+      class="parallax-text3 relative right-0 z-1 mb-96 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
     >
       <div class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2">
         <h4 class="font-bold">Mobila arbetsplattformar</h4>
@@ -80,7 +82,7 @@
     </div>
 
     <div
-      class="relative left-0 mb-96 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
+      class="parallax-text1 relative left-0 mb-96 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
     >
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-1 sm:col-end-1 sm:max-w-2/3"
@@ -103,7 +105,7 @@
     </div>
 
     <div
-      class="relative right-0 z-1 mb-96 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
+      class="parallax-text2 relative right-0 z-1 mb-96 flex justify-end pl-4 text-left sm:grid-cols-2 sm:px-0"
     >
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-2/3"
@@ -140,7 +142,16 @@ export default {
       );
 
       parallaxElements.forEach(function (el, index) {
-        const rate = index === 0 ? 0.4 : 0.2;
+        const rate =
+          index === 0
+            ? 0.4
+            : index === 1
+              ? 0.3
+              : index === 2
+                ? 0.2
+                : index === 3
+                  ? 0.1
+                  : 0.05;
         const translateY = scrolled * rate;
         el.style.transform = `translateY(${translateY}px)`;
       });
