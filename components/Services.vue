@@ -4,11 +4,26 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 
 <template>
   <div class="relative overflow-hidden pb-32">
-    <div class="absolute inset-0 flex items-center overflow-hidden">
+    <div
+      class="absolute inset-0 flex flex-col items-center overflow-hidden bg-black"
+    >
       <img
         src="../assets/images/futuristic-elevator-high.jpg"
         alt=""
-        class="parallax-background -mt-12 h-full w-full object-cover"
+        class="parallax-background h-[250vh] w-full object-cover md:h-[180vh]"
+      />
+      <img
+        src="../assets/images/futuristic-elevator-high.jpg"
+        alt=""
+        class="parallax-background h-[250vh] w-full object-cover opacity-50 md:h-[180vh]"
+      />
+    </div>
+
+    <div class="absolute inset-0 -left-52 flex items-center overflow-hidden">
+      <img
+        src="../assets/images/futuristic-elevator-front.png"
+        alt=""
+        class="parallax-elevators h-auto min-w-[130vw] object-cover"
       />
     </div>
 
@@ -133,9 +148,9 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     </div>
 
     <div
-      class="relative mb-8 grid min-h-96 w-full items-center gap-8 px-4 text-white lg:grid-cols-2 lg:px-8"
+      class="relative mb-8 grid min-h-96 w-full items-center gap-8 px-4 lg:grid-cols-2 lg:px-8"
     >
-      <div class="flex flex-col bg-black p-8">
+      <div class="flex flex-col bg-white p-8">
         <h4 class="font-bold">Kranar</h4>
 
         <ul class="flex flex-col space-y-4">
@@ -181,9 +196,9 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     </div>
 
     <div
-      class="relative mb-8 grid min-h-96 w-full items-center gap-8 px-4 text-white lg:grid-cols-2 lg:px-8"
+      class="relative mb-8 grid min-h-96 w-full items-center gap-8 px-4 lg:grid-cols-2 lg:px-8"
     >
-      <div class="flex flex-col bg-black p-8">
+      <div class="flex flex-col bg-white p-8">
         <h4 class="font-bold">Övriga besiktningstjänster</h4>
 
         <ul class="flex flex-col space-y-4">
@@ -232,23 +247,23 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
         class="relative h-full w-auto object-cover lg:order-first lg:py-44"
       />
     </div>
-  </div>
 
-  <div
-    class="relative mb-8 grid min-h-96 w-full items-center gap-8 px-4 text-white lg:grid-cols-2 lg:px-8"
-  >
-    <div class="flex flex-col bg-black p-8">
-      <h4 class="font-bold">Hissar</h4>
+    <div
+      class="relative mb-8 grid min-h-96 w-full items-center gap-8 px-4 lg:grid-cols-2 lg:px-8"
+    >
+      <div class="flex flex-col bg-white p-8">
+        <h4 class="font-bold">Hissar</h4>
 
-      <ul class="flex flex-col space-y-4">
-        <li class="leading-normal">
-          • Återkommande besiktning av hissar så som personhissar, varuhissar
-          eller plattformshissar med mera
-        </li>
-      </ul>
+        <ul class="flex flex-col space-y-4">
+          <li class="leading-normal">
+            • Återkommande besiktning av hissar så som personhissar, varuhissar
+            eller plattformshissar med mera
+          </li>
+        </ul>
+      </div>
+
+      <img src="../assets/images/hiss.jpg" class="relative h-auto w-full" />
     </div>
-
-    <img src="../assets/images/hiss.jpg" class="relative h-auto w-full" />
 
     <ChevronDoubleDownIcon
       class="fixed bottom-4 left-4 h-12 w-12 text-white transition-opacity duration-500 ease-in-out"
@@ -276,7 +291,7 @@ export default {
       }
 
       const parallaxElements = document.querySelectorAll(
-        ".parallax-background, .parallax-text1, .parallax-text2, .parallax-text3",
+        ".parallax-background, .parallax-elevators, .parallax-text1, .parallax-text2",
       );
 
       parallaxElements.forEach(function (el, index) {
@@ -284,9 +299,9 @@ export default {
           index === 0
             ? 0.4
             : index === 1
-              ? 0.3
+              ? 0.2
               : index === 2
-                ? 0.2
+                ? 0.15
                 : index === 3
                   ? 0.1
                   : 0.05;
