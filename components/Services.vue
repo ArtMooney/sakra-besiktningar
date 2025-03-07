@@ -84,105 +84,51 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     />
   </div>
 
-  <div class="relative my-8 w-full border-neutral-200 px-4">
-    <div class="flex flex-col bg-neutral-100 p-8 px-8 shadow-md">
-      <h4 class="font-bold">Kranar</h4>
+  <PointBlock
+    title="Kranar"
+    :point-lines="[
+      '• Besiktningskrav enligt AFS 2023:11',
+      '• Besiktningsintervall 12 mån',
+      '• Arbete med kranar innebär ofta att tung last hanteras nära arbetstagare. En felfunktion av kranen kan därför leda till allvarliga konsekvenser',
+      '• Kranar omfattar telfer på balk, svängkran på vägg, pelarsvängkran, traverssystem med mera',
+      '• Definition av kran: En lyftanordning där lasten med hjälp av ett icke styrt lastbärande organ kan lyftas och sänkas vertikalt och dessutom förflyttas horisontellt.',
+      '• Undantagna kravet på montagebesiktning är kranar som flyttas horisontellt med handkraft',
+      '• Undantagna kravet på samtliga besiktningar är kranar vars maxlast understiger 500 kg. Krav på periodisk kontroll av kunnig person kvarstår',
+      '• Vi utför även frivillig besiktning av kranar med maxlast understigande 500 kg för att ni ska uppfylla kravet på periodisk kontroll och bidra till en säkrare arbetsplats. (Besiktningstjänsten faller inte under företagets ackreditering av Swedac då besiktningen är frivillig.)',
+    ]"
+  />
 
-      <ul class="flex flex-col space-y-4">
-        <li class="leading-normal">• Besiktningskrav enligt AFS 2023:11</li>
-        <li class="leading-normal">• Besiktningsintervall 12 mån</li>
-        <li class="leading-normal">
-          • Arbete med kranar innebär ofta att tung last hanteras nära
-          arbetstagare. En felfunktion av kranen kan därför leda till allvarliga
-          konsekvenser
-        </li>
-        <li class="leading-normal">
-          • Kranar omfattar telfer på balk, svängkran på vägg, pelarsvängkran,
-          traverssystem med mera
-        </li>
-        <li class="leading-normal">
-          • Definition av kran: En lyftanordning där lasten med hjälp av ett
-          icke styrt lastbärande organ kan lyftas och sänkas vertikalt och
-          dessutom förflyttas horisontellt.
-        </li>
-        <li class="leading-normal">
-          • Undantagna kravet på montagebesiktning är kranar som flyttas
-          horisontellt med handkraft
-        </li>
-        <li class="leading-normal">
-          • Undantagna kravet på samtliga besiktningar är kranar vars maxlast
-          understiger 500 kg. Krav på periodisk kontroll av kunnig person
-          kvarstår
-        </li>
-        <li class="leading-normal">
-          • Vi utför även frivillig besiktning av kranar med maxlast
-          understigande 500 kg för att ni ska uppfylla kravet på periodisk
-          kontroll och bidra till en säkrare arbetsplats. (Besiktningstjänsten
-          faller inte under företagets ackreditering av Swedac då besiktningen
-          är frivillig.)
-        </li>
-      </ul>
-    </div>
-  </div>
+  <PointBlock
+    title="Övriga besiktningstjänster"
+    :point-lines="[
+      '<b>Lingångar och punktlyftar</b>',
+      '• Besiktningskrav enligt AFS 2023:11',
+      '• Besiktningsintervall',
+      '--- Maskindriven: 12 månaders',
+      '--- Handdriven: 36 månaders',
+      '<br />',
+      '<b>Tillfälligt personlyft med truck och arbetskorg</b>',
+      '• Besiktningskrav enligt AFS 2023:11',
+      '• Krav på första besiktning för att säkerställa att trucken och korgen är säkra att kombinera för tillfälligt personlyft enligt gällande föreskrift',
+      '• Inget krav på återkommande besiktning. Krav på periodisk kontroll av kunnig person kvarstår',
+      '<br />',
+      '<b>Lyftbord</b>',
+      '• Inget besiktningskrav men krav finns på periodisk kontroll. (Besiktningstjänsten faller inte under företagets ackreditering av Swedac då besiktningen är frivillig.)',
+      '• Lämpligt intervall 12 månader',
+      '<br />',
+      '<b>Övriga personlyftande anordningar</b>',
+      '• Besiktningskrav enligt AFS 2023:11',
+      '• Intervall 12 månader',
+      '• Undantagna kravet på besiktning är övriga lyftanordningar med en lyfthöjd understigande 0,5 meter',
+    ]"
+  />
 
-  <div class="relative mb-8 w-full border-neutral-200 px-4">
-    <div class="flex flex-col bg-neutral-100 p-8 px-8 shadow-md">
-      <h4 class="font-bold">Övriga besiktningstjänster</h4>
-
-      <ul class="flex flex-col space-y-4">
-        <li class="leading-normal"><b>Lingångar och punktlyftar</b></li>
-        <li class="leading-normal">• Besiktningskrav enligt AFS 2023:11</li>
-        <li class="leading-normal">• Besiktningsintervall</li>
-        <li class="leading-normal">--- Maskindriven: 12 månaders</li>
-        <li class="leading-normal">--- Handdriven: 36 månaders</li>
-        <br />
-        <li class="leading-normal">
-          <b>Tillfälligt personlyft med truck och arbetskorg</b>
-        </li>
-        <li class="leading-normal">• Besiktningskrav enligt AFS 2023:11</li>
-        <li class="leading-normal">
-          • Krav på första besiktning för att säkerställa att trucken och korgen
-          är säkra att kombinera för tillfälligt personlyft enligt gällande
-          föreskrift
-        </li>
-        <li class="leading-normal">
-          • Inget krav på återkommande besiktning. Krav på periodisk kontroll av
-          kunnig person kvarstår
-        </li>
-        <br />
-        <li class="leading-normal"><b>Lyftbord</b></li>
-        <li class="leading-normal">
-          • Inget besiktningskrav men krav finns på periodisk kontroll.
-          (Besiktningstjänsten faller inte under företagets ackreditering av
-          Swedac då besiktningen är frivillig.)
-        </li>
-        <li class="leading-normal">• Lämpligt intervall 12 månader</li>
-        <br />
-        <li class="leading-normal">
-          <b>Övriga personlyftande anordningar</b>
-        </li>
-        <li class="leading-normal">• Besiktningskrav enligt AFS 2023:11</li>
-        <li class="leading-normal">• Intervall 12 månader</li>
-        <li class="leading-normal">
-          • Undantagna kravet på besiktning är övriga lyftanordningar med en
-          lyfthöjd understigande 0,5 meter
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="relative mb-8 w-full border-neutral-200 px-4">
-    <div class="flex flex-col bg-neutral-100 p-8 px-8 shadow-md">
-      <h4 class="font-bold">Hissar</h4>
-
-      <ul class="flex flex-col space-y-4">
-        <li class="leading-normal">
-          • Återkommande besiktning av hissar så som personhissar, varuhissar
-          eller plattformshissar med mera
-        </li>
-      </ul>
-    </div>
-  </div>
+  <PointBlock
+    title="Hissar"
+    :point-lines="[
+      '• Återkommande besiktning av hissar så som personhissar, varuhissar eller plattformshissar med mera',
+    ]"
+  />
 
   <ChevronDoubleDownIcon
     class="fixed bottom-4 left-4 h-12 w-12 text-white transition-opacity duration-500 ease-in-out"
