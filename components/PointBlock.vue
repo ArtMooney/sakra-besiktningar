@@ -12,13 +12,13 @@ import { ChevronDownIcon } from "@heroicons/vue/24/solid";
       <template v-for="(line, index) in pointLines" :key="index">
         <template v-if="line?.accordionTitle && line?.accordionLines">
           <div
-            class="flex cursor-pointer items-center"
+            class="flex cursor-pointer items-center justify-between sm:justify-start"
             @click="toggleAccordion(index)"
           >
             <div v-html="line?.accordionTitle"></div>
 
             <ChevronDownIcon
-              class="ml-2 h-5 w-5 transition-transform duration-200 ease-in-out"
+              class="ml-2 h-5 w-5 shrink-0 transition-transform duration-200 ease-in-out"
               :class="[accordionOpen && clickedIndex === index && 'rotate-180']"
             />
           </div>
