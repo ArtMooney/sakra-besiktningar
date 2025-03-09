@@ -10,7 +10,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       <img
         src="../assets/images/crane-blue-sky.jpg"
         alt=""
-        class="parallax-background h-[240vh] w-full object-cover sm:h-[250vh] lg:h-[160vh]"
+        class="parallax-background h-[240vh] w-full object-cover sm:h-[300vh] lg:h-[160vh]"
       />
     </div>
 
