@@ -101,25 +101,42 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
   <PointBlock
     title="Övriga besiktningstjänster"
     :point-lines="[
-      '<b>Lingångar och punktlyftar</b>',
-      '• Besiktningskrav enligt AFS 2023:11',
-      '• Besiktningsintervall',
-      '--- Maskindriven: 12 månaders',
-      '--- Handdriven: 36 månaders',
+      {
+        accordionTitle: '<b>Lingångar och punktlyftar</b>',
+        accordionLines: [
+          '• Besiktningskrav enligt AFS 2023:11',
+          '• Besiktningsintervall',
+          '--- Maskindriven: 12 månaders',
+          '--- Handdriven: 36 månaders',
+        ],
+      },
       '<br />',
-      '<b>Tillfälligt personlyft med truck och arbetskorg</b>',
-      '• Besiktningskrav enligt AFS 2023:11',
-      '• Krav på första besiktning för att säkerställa att trucken och korgen är säkra att kombinera för tillfälligt personlyft enligt gällande föreskrift',
-      '• Inget krav på återkommande besiktning. Krav på periodisk kontroll av kunnig person kvarstår',
+      {
+        accordionTitle:
+          '<b>Tillfälligt personlyft med truck och arbetskorg</b>',
+        accordionLines: [
+          '• Besiktningskrav enligt AFS 2023:11',
+          '• Krav på första besiktning för att säkerställa att trucken och korgen är säkra att kombinera för tillfälligt personlyft enligt gällande föreskrift',
+          '• Inget krav på återkommande besiktning. Krav på periodisk kontroll av kunnig person kvarstår',
+        ],
+      },
       '<br />',
-      '<b>Lyftbord</b>',
-      '• Inget besiktningskrav men krav finns på periodisk kontroll. (Besiktningstjänsten faller inte under företagets ackreditering av Swedac då besiktningen är frivillig.)',
-      '• Lämpligt intervall 12 månader',
+      {
+        accordionTitle: '<b>Lyftbord</b>',
+        accordionLines: [
+          '• Inget besiktningskrav men krav finns på periodisk kontroll. (Besiktningstjänsten faller inte under företagets ackreditering av Swedac då besiktningen är frivillig.)',
+          '• Lämpligt intervall 12 månader',
+        ],
+      },
       '<br />',
-      '<b>Övriga personlyftande anordningar</b>',
-      '• Besiktningskrav enligt AFS 2023:11',
-      '• Intervall 12 månader',
-      '• Undantagna kravet på besiktning är övriga lyftanordningar med en lyfthöjd understigande 0,5 meter',
+      {
+        accordionTitle: '<b>Övriga personlyftande anordningar</b>',
+        accordionLines: [
+          '• Besiktningskrav enligt AFS 2023:11',
+          '• Intervall 12 månader',
+          '• Undantagna kravet på besiktning är övriga lyftanordningar med en lyfthöjd understigande 0,5 meter',
+        ],
+      },
     ]"
   />
 
