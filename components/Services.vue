@@ -172,20 +172,11 @@ export default {
       }
 
       const parallaxElements = document.querySelectorAll(
-        ".parallax-background, .parallax-clouds, .parallax-text1, .parallax-text2",
+        ".parallax-background, .parallax-clouds",
       );
 
       parallaxElements.forEach(function (el, index) {
-        const rate =
-          index === 0
-            ? 0.7
-            : index === 1
-              ? 0.5
-              : index === 2
-                ? 0.15
-                : index === 3
-                  ? 0.1
-                  : 0.05;
+        const rate = index === 0 ? 0.7 : 0.5;
         const translateY = scrolled * rate;
         el.style.transform = `translateY(${translateY}px)`;
       });
