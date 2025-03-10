@@ -3,14 +3,14 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 </script>
 
 <template>
-  <div class="relative overflow-hidden pb-32">
+  <div class="relative overflow-hidden">
     <div
       class="absolute inset-0 -right-44 left-0 -mt-12 flex flex-col items-center overflow-hidden bg-black sm:right-0"
     >
       <img
         src="../assets/images/crane-blue-sky.jpg"
         alt=""
-        class="parallax-background h-[240vh] w-full object-cover sm:h-[300vh] lg:h-[160vh]"
+        class="parallax-background h-[140rem] w-full object-cover"
       />
     </div>
 
