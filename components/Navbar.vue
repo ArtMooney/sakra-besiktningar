@@ -44,7 +44,7 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
       <Button
         @click="showNavbar = false"
         text="Kontakta oss"
-        link="/"
+        link="/kontakta-oss"
         type="button"
       />
     </div>

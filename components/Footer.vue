@@ -16,9 +16,9 @@ import imageLogo from "assets/images/sakra-logo.png";
     <div class="flex items-center gap-4">
       <router-link to="/" class="pt-0.5 hover:underline">Hem</router-link>
       <router-link to="/tjanster" class="pt-0.5 hover:underline"
-        >Tjänster</router-link
-      >
-      <router-link to="/" class="pt-0.5 hover:underline"
+        >Tjänster
+      </router-link>
+      <router-link to="/kontakta-oss" class="pt-0.5 hover:underline"
         >Kontakta oss
       </router-link>
     </div>
