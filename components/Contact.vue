@@ -211,7 +211,7 @@ export default {
         requiredFields(event.target.form) &&
         emailValidator(event.target.form)
       ) {
-        const { data: res, error } = await useFetch("/api/contact", {
+        const { data: res, error } = await useLazyFetch("/api/contact", {
           method: "POST",
           headers: {
             Authorization: "Basic " + btoa(this.userName + ":" + this.userPass),
