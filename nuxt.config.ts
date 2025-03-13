@@ -9,11 +9,15 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   runtimeConfig: {
-    MAILGUN_API_KEY: process.env.MAILGUN_API_KEY,
+    mailgunApiKey: process.env.NUXT_MAILGUN_API_KEY,
+    emailFrom: process.env.NUXT_EMAIL_FROM,
+    emailTo: process.env.NUXT_EMAIL_TO,
+    username: process.env.NUXT_USERNAME,
+    userpass: process.env.NUXT_USERPASS,
 
     public: {
-      USERNAME: process.env.NUXT_PUBLIC_USERNAME,
-      USERPASS: process.env.NUXT_PUBLIC_USERPASS,
+      username: process.env.NUXT_PUBLIC_USERNAME,
+      userpass: process.env.NUXT_PUBLIC_USERPASS,
     },
   },
 });

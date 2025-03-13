@@ -31,6 +31,7 @@ import { formCollector } from "../utils/formCollector.js";
         placeholder-text=""
         :required="true"
         label-text="Företagsnamn:"
+        autocomplete="company"
       />
 
       <Input
@@ -39,6 +40,7 @@ import { formCollector } from "../utils/formCollector.js";
         placeholder-text=""
         :required="true"
         label-text="E-post:"
+        autocomplete="email"
       />
 
       <Input
@@ -47,6 +49,7 @@ import { formCollector } from "../utils/formCollector.js";
         placeholder-text=""
         :required="true"
         label-text="Telefon:"
+        autocomplete="tel"
       />
 
       <div class="hidden">
@@ -181,7 +184,7 @@ export default {
         requiredFields(event.target.form) &&
         emailValidator(event.target.form)
       ) {
-        const res = await fetch("/contact", {
+        const res = await $fetch("/api/contact", {
           method: "POST",
           headers: {
             Authorization: "Basic " + btoa(this.userName + ":" + this.userPass),
@@ -189,11 +192,9 @@ export default {
           body: formCollector(event.target.form, this.extraFields),
         });
 
-        const jsonResponse = await res.json();
-
-        if (jsonResponse === "error") {
+        if (res === "error") {
           this.errorMessage = true;
-        } else if (jsonResponse === "ok") {
+        } else if (res === "ok") {
           const savedText = this.buttonText;
           this.buttonText = event.target.dataset.wait;
 
