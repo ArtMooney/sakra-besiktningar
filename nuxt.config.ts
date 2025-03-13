@@ -12,12 +12,12 @@ export default defineNuxtConfig({
     mailgunApiKey: process.env.NUXT_MAILGUN_API_KEY,
     emailFrom: process.env.NUXT_EMAIL_FROM,
     emailTo: process.env.NUXT_EMAIL_TO,
-    username: process.env.NUXT_USERNAME,
-    userpass: process.env.NUXT_USERPASS,
+    userName: process.env.NUXT_USERNAME,
+    userPass: process.env.NUXT_USERPASS,
 
     public: {
-      username: process.env.NUXT_PUBLIC_USERNAME,
-      userpass: process.env.NUXT_PUBLIC_USERPASS,
+      userName: process.env.NUXT_PUBLIC_USERNAME,
+      userPass: process.env.NUXT_PUBLIC_USERPASS,
     },
   },
 });

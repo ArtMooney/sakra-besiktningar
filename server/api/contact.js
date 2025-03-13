@@ -4,11 +4,9 @@ import { checkLogin } from "../utils/check-login.js";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
-
-  console.log("HEJ", config);
-
   const headers = getHeaders(event);
-  if (!(await checkLogin(headers, config.username, config.userpass))) {
+
+  if (!(await checkLogin(headers, config.userName, config.userPass))) {
     throw createError({
       statusCode: 401,
       statusMessage: "Login failed",

@@ -8,13 +8,7 @@ import { formCollector } from "../utils/formCollector.js";
 
 <template>
   <div>
-    <h2
-      class="absolute right-auto left-auto z-1 mt-24 w-full px-4 text-center text-4xl text-white md:text-6xl lg:mt-20"
-    >
-      Kontakta oss
-    </h2>
-
-    <div class="h-[60vh] w-full">
+    <div class="h-[30vh] w-full md:h-[40vh] lg:h-[60vh]">
       <img
         src="../assets/images/portar.jpg"
         alt=""
@@ -23,8 +17,17 @@ import { formCollector } from "../utils/formCollector.js";
     </div>
   </div>
 
-  <div id="contact" class="px-60 py-12">
-    <form v-if="contactForm" @submit.prevent name="contact">
+  <div id="contact" class="px-4 py-20 sm:px-8 md:py-32">
+    <h2 class="mb-24 w-full px-4 text-center text-4xl md:text-6xl lg:mb-32">
+      Kontakta oss
+    </h2>
+
+    <form
+      v-if="contactForm"
+      @submit.prevent
+      name="contact"
+      class="md:px-20 xl:px-52"
+    >
       <Input
         name="company"
         type="text"
@@ -90,7 +93,7 @@ import { formCollector } from "../utils/formCollector.js";
         />
       </div>
 
-      <div class="flex items-start pt-8">
+      <div class="flex justify-start pt-8">
         <Button
           @click="sendForm"
           :text="buttonText"
@@ -103,17 +106,17 @@ import { formCollector } from "../utils/formCollector.js";
     </form>
 
     <div v-if="successMessage">
-      <div class="mt-4 bg-[#a38373] p-4 text-black">
+      <div class="my-20 bg-blue-200 p-4 text-black">
         {{ emailSuccessMessage }}
       </div>
     </div>
 
-    <div v-if="errorMessage" class="mt-4 bg-[#a38373] p-4 text-black">
+    <div v-if="errorMessage" class="my-20 bg-pink-100 p-4 text-black">
       <p>{{ defaultEmailMessage }}</p>
     </div>
   </div>
 
-  <div class="h-[60vh] w-full">
+  <div class="h-auto">
     <img
       src="../assets/images/hiss.jpg"
       alt=""
@@ -129,8 +132,8 @@ export default {
   data() {
     const config = useRuntimeConfig();
     return {
-      userName: config.public.USERNAME,
-      userPass: config.public.USERPASS,
+      userName: config.public.userName,
+      userPass: config.public.userPass,
       extraFields: {
         clientip: "",
         pageuri: "",
@@ -184,7 +187,7 @@ export default {
         requiredFields(event.target.form) &&
         emailValidator(event.target.form)
       ) {
-        const res = await $fetch("/api/contact", {
+        const { data: res, error } = await useFetch("/api/contact", {
           method: "POST",
           headers: {
             Authorization: "Basic " + btoa(this.userName + ":" + this.userPass),
@@ -192,9 +195,9 @@ export default {
           body: formCollector(event.target.form, this.extraFields),
         });
 
-        if (res === "error") {
+        if (error.value) {
           this.errorMessage = true;
-        } else if (res === "ok") {
+        } else if (res.value && res.value.status === "ok") {
           const savedText = this.buttonText;
           this.buttonText = event.target.dataset.wait;
 
