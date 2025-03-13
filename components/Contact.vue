@@ -22,7 +22,7 @@ import { formCollector } from "../utils/formCollector.js";
       Kontakta oss
     </h2>
 
-    <div class="mb-12 px-4 sm:px-8 md:px-20 lg:text-center xl:px-52">
+    <div class="mx-4 p-4 sm:mx-8 md:mx-20 md:p-8 lg:text-center xl:mx-52">
       <h4 class="font-bold">Kontakta oss för en kostnadsfri offert.</h4>
       <p>Vi återkommer till er inom kort med en offert utan platsbesök.</p>
     </div>
@@ -31,7 +31,7 @@ import { formCollector } from "../utils/formCollector.js";
       v-if="contactForm"
       @submit.prevent
       name="contact"
-      class="px-4 sm:px-8 md:px-20 xl:px-52"
+      class="mx-4 bg-gray-50 p-4 sm:mx-8 md:mx-20 md:p-8 xl:mx-52"
     >
       <Input
         name="company"
@@ -107,13 +107,35 @@ import { formCollector } from "../utils/formCollector.js";
       </div>
     </form>
 
+    <div
+      class="mx-4 mt-8 grid gap-4 text-center sm:mx-8 md:mx-20 md:grid-cols-2 xl:mx-52"
+    >
+      <div
+        class="flex h-full w-full flex-col items-center justify-center bg-amber-200 p-4 md:p-8"
+      >
+        <p>Telefon:</p>
+        <a class="underline" href="tel:0760-05 75 15">0760-05 75 15</a>
+      </div>
+      <div
+        class="flex h-full w-full flex-col items-center justify-center bg-amber-200 p-4 md:p-8"
+      >
+        <p>E-post:</p>
+        <a class="underline" href="mailto:info@sakrabesiktningar.se"
+          >info@sakrabesiktningar.se</a
+        >
+      </div>
+    </div>
+
     <div v-if="successMessage">
-      <div class="my-20 bg-blue-200 p-4 text-black">
+      <div class="mx-4 my-20 mt-8 bg-blue-200 p-8 sm:mx-8 md:mx-20 xl:mx-52">
         {{ emailSuccessMessage }}
       </div>
     </div>
 
-    <div v-if="errorMessage" class="my-20 bg-pink-100 p-4 text-black">
+    <div
+      v-if="errorMessage"
+      class="mx-4 my-20 mt-8 bg-pink-100 p-8 sm:mx-8 md:mx-20 xl:mx-52"
+    >
       <p>{{ defaultEmailMessage }}</p>
     </div>
   </div>
