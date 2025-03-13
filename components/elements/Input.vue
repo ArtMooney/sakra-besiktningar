@@ -4,7 +4,7 @@
 
     <input
       v-if="type !== 'message'"
-      class="my-1 w-full border border-solid border-black/25 px-4 py-2 placeholder:text-neutral-300"
+      class="my-2 w-full border border-solid border-black/25 px-4 py-3 placeholder:text-neutral-300"
       maxlength="256"
       :name="name"
       :type="type"

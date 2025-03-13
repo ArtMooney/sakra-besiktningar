@@ -17,41 +17,43 @@ import { formCollector } from "../utils/formCollector.js";
     </div>
   </div>
 
-  <div id="contact" class="px-4 py-20 sm:px-8 md:py-32">
+  <div id="contact" class="py-20 md:py-32">
     <h2 class="mb-24 w-full px-4 text-center text-4xl md:text-6xl lg:mb-32">
       Kontakta oss
     </h2>
+
+    <div class="mb-12 px-4 sm:px-8 md:px-20 lg:text-center xl:px-52">
+      <h4 class="font-bold">Kontakta oss för en kostnadsfri offert.</h4>
+      <p>Vi återkommer till er inom kort med en offert utan platsbesök.</p>
+    </div>
 
     <form
       v-if="contactForm"
       @submit.prevent
       name="contact"
-      class="md:px-20 xl:px-52"
+      class="px-4 sm:px-8 md:px-20 xl:px-52"
     >
       <Input
         name="company"
         type="text"
-        placeholder-text=""
+        placeholder-text="Företagsnamn:"
         :required="true"
-        label-text="Företagsnamn:"
         autocomplete="company"
       />
 
       <Input
         name="email"
         type="email"
-        placeholder-text=""
+        placeholder-text="E-post:"
         :required="true"
-        label-text="E-post:"
         autocomplete="email"
       />
 
       <Input
         name="phone"
         type="tel"
-        placeholder-text=""
+        placeholder-text="Telefon:"
         :required="true"
-        label-text="Telefon:"
         autocomplete="tel"
       />
 
@@ -140,7 +142,7 @@ export default {
         pagename: "",
         amex: "",
       },
-      buttonText: "Skicka",
+      buttonText: "Begär offert",
       defaultEmailMessage: "Något gick fel när formuläret skulle skickas.",
       emailSuccessMessage: `Tack för ert meddelande! Vi återkommer till er snart!`,
       emailErrorMessage:
