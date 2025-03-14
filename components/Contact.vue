@@ -8,7 +8,7 @@ import { formCollector } from "../utils/formCollector.js";
 
 <template>
   <div>
-    <div class="h-[30vh] w-full md:h-[40vh] lg:h-[60vh]">
+    <div class="h-[30vh] min-h-96 w-full md:h-[40vh] lg:h-[60vh]">
       <img
         src="../assets/images/portar.jpg"
         alt=""
@@ -107,17 +107,15 @@ import { formCollector } from "../utils/formCollector.js";
       </div>
     </form>
 
-    <div
-      class="mx-4 mt-8 grid gap-4 text-center sm:mx-8 md:mx-20 md:grid-cols-2 xl:mx-52"
-    >
+    <div class="mx-4 mt-8 grid gap-4 sm:mx-8 md:mx-20 md:grid-cols-2 xl:mx-52">
       <div
-        class="flex h-full w-full flex-col items-center justify-center bg-amber-200 p-4 md:p-8"
+        class="flex h-full w-full flex-col bg-amber-200 p-4 sm:items-center md:p-8"
       >
         <p>Telefon:</p>
         <a class="underline" href="tel:0760-05 75 15">0760-05 75 15</a>
       </div>
       <div
-        class="flex h-full w-full flex-col items-center justify-center bg-amber-200 p-4 md:p-8"
+        class="flex h-full w-full flex-col bg-amber-200 p-4 sm:items-center md:p-8"
       >
         <p>E-post:</p>
         <a class="underline" href="mailto:info@sakrabesiktningar.se"
