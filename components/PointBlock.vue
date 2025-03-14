@@ -67,8 +67,8 @@ export default {
 
   methods: {
     toggleAccordion(index) {
+      this.accordionOpen = !(this.accordionOpen && this.clickedIndex === index);
       this.clickedIndex = index;
-      this.accordionOpen = !this.accordionOpen;
     },
   },
 };
