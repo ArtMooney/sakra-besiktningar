@@ -122,6 +122,13 @@ import { formCollector } from "../utils/formCollector.js";
           >info@sakrabesiktningar.se</a
         >
       </div>
+      <div
+        class="flex h-full w-full flex-col bg-amber-200 p-4 sm:items-center md:col-span-2 md:p-8"
+      >
+        <p>Adress:</p>
+        <p>Varlabergsvägen 29</p>
+        <p>434 39 Kungsbacka</p>
+      </div>
     </div>
 
     <div v-if="successMessage">
