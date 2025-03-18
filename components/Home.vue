@@ -49,8 +49,8 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     </div>
 
     <img
-      src="../assets/images/hookblock-rotated.png"
-      class="relative -mt-20 h-auto w-full object-cover md:-mt-96"
+      src="../assets/images/travers.png"
+      class="relative mt-16 mb-32 h-auto w-full object-cover sm:mt-20 md:mt-12 md:mb-96"
     />
 
     <div
