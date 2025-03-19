@@ -23,10 +23,27 @@ import imageLogo from "assets/images/sakra-logo.png";
       </router-link>
     </div>
 
+    <p
+      class="bottom-3 col-span-1 mt-10 flex max-w-xl flex-wrap justify-center text-center text-xs leading-5 opacity-40 md:col-span-3 lg:max-w-none"
+    >
+      Säkra besiktningar Sverige AB <span class="px-3">|</span> Varlabergsvägen
+      29 <span class="px-3">|</span> 434 39 Kungsbacka
+      <span class="px-3">|</span>
+      <a class="underline hover:opacity-50" href="tel:0760-05 75 15"
+        >Tel. 0760-05 75 15</a
+      >
+      <span class="px-3">|</span>
+      <a
+        class="underline hover:opacity-50"
+        href="mailto:info@sakrabesiktningar.se"
+        >E-post: info@sakrabesiktningar.se</a
+      >
+    </p>
+
     <div class="my-4 w-1/3 border-t border-gray-300"></div>
 
     <a
-      class="bottom-3 col-span-1 flex text-xs opacity-40 hover:text-black/75 md:col-span-3"
+      class="bottom-3 col-span-1 flex text-xs opacity-20 hover:text-black/75 md:col-span-3"
       href="https://www.framecore.se"
       target="_blank"
     >
