@@ -5,12 +5,12 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 <template>
   <div class="relative overflow-hidden">
     <div
-      class="absolute inset-0 -right-44 left-0 -mt-12 flex flex-col items-center overflow-hidden bg-black sm:right-0"
+      class="absolute inset-0 -mt-12 flex flex-col items-center overflow-hidden"
     >
       <img
-        src="../assets/images/crane-blue-sky.jpg"
+        src="../assets/images/modern-office-elevators.jpg"
         alt=""
-        class="parallax-background h-[140rem] w-full object-cover"
+        class="parallax-background h-[130rem] w-full object-cover sm:h-[130rem]"
       />
     </div>
 
@@ -23,13 +23,15 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     </div>
 
     <div
-      class="relative flex h-[50vh] flex-col items-center justify-center px-8 text-center text-white"
+      class="relative mt-12 mb-20 flex h-[50vh] flex-col items-center justify-center px-8 text-center"
     >
-      <h2 class="text-4xl md:text-6xl">Besiktning av</h2>
+      <h2 class="bg-white px-20 pt-5 pb-3 text-4xl md:text-6xl">
+        Besiktning av
+      </h2>
     </div>
 
     <PointBlob
-      class="relative mb-96 justify-end pl-4"
+      class="relative mb-32 justify-end pl-4"
       title="Motordrivna portar"
       :point-lines="[
         '• Besiktningskrav enligt Boverkets föreskrift BFS 2011:12 med ändringar',
@@ -41,7 +43,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     />
 
     <PointBlob
-      class="relative mb-96 justify-start pr-4"
+      class="relative mb-32 justify-start pr-4"
       title="Lastbryggor"
       :point-lines="[
         '• Besiktningskrav enligt AFS 2023:11',
@@ -52,7 +54,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     />
 
     <PointBlob
-      class="relative mb-96 justify-end pl-4"
+      class="relative mb-32 justify-end pl-4"
       title="Mobila arbetsplattformar"
       :point-lines="[
         '• Besiktningskrav enligt AFS 2023:11',
@@ -62,7 +64,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     />
 
     <PointBlob
-      class="relative mb-96 justify-start pr-4"
+      class="relative mb-32 justify-start pr-4"
       title="Plocktruckar"
       :point-lines="[
         '• Besiktningskrav enligt AFS 2023:11',
@@ -73,7 +75,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     />
 
     <PointBlob
-      class="relative mb-96 justify-end pl-4"
+      class="relative mb-32 justify-end pl-4"
       title="Fordonslyftar"
       :point-lines="[
         '• Besiktningskrav enligt AFS 2023:11',
@@ -176,7 +178,7 @@ export default {
       );
 
       parallaxElements.forEach(function (el, index) {
-        const rate = index === 0 ? 0.7 : 0.5;
+        const rate = index === 0 ? 0.65 : 0.5;
         const translateY = scrolled * rate;
         el.style.transform = `translateY(${translateY}px)`;
       });
