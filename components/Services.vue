@@ -37,7 +37,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
         '• Besiktningskrav enligt Boverkets föreskrift BFS 2011:12 med ändringar',
         '• Krav på första besiktning eller att det framgår av EG-försäkran om överensstämmelse att installationen ingår i CE-märkningen',
         '• Besiktningsintervall 24 månader',
-        '• Omfattar olika typer av motordrivna portar så som takskjutportar vikportar samt grindar',
+        '• Omfattar olika typer av motordrivna portar så som takskjutportar, vikportar samt grindar',
         '• Undantaget krav på besiktning är portar i anslutning till småbostadshus',
       ]"
     />
@@ -47,7 +47,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       title="Lastbryggor"
       :point-lines="[
         '• Besiktningskrav enligt AFS 2023:11',
-        '• Besiktningsintervall 12 månader',
+        '• Besiktningsintervall 24 månader',
         '• Första återkommande besiktning är 24 månader efter att anordningen togs i bruk första gången',
         '• Ofta högt slitage vid regelbunden användning',
       ]"
@@ -101,6 +101,14 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
   />
 
   <PointBlock
+    title="Hissar"
+    :point-lines="[
+      '• Återkommande besiktning av hissar så som personhissar, varuhissar eller plattformshissar med mera',
+      '• Besiktningsintervall 12 – 24 månader',
+    ]"
+  />
+
+  <PointBlock
     title="Övriga besiktningstjänster"
     :point-lines="[
       {
@@ -139,13 +147,6 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
           '• Undantagna kravet på besiktning är övriga lyftanordningar med en lyfthöjd understigande 0,5 meter',
         ],
       },
-    ]"
-  />
-
-  <PointBlock
-    title="Hissar"
-    :point-lines="[
-      '• Återkommande besiktning av hissar så som personhissar, varuhissar eller plattformshissar med mera',
     ]"
   />
 
