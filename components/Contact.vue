@@ -24,7 +24,7 @@ import { formCollector } from "../utils/formCollector.js";
 
     <div class="mx-4 p-4 sm:mx-8 md:mx-20 md:p-8 lg:text-center xl:mx-52">
       <h4 class="font-bold">Kontakta oss för en kostnadsfri offert.</h4>
-      <p>Vi återkommer till er inom kort med en offert utan platsbesök.</p>
+      <p>Vi återkommer till er inom kort.</p>
     </div>
 
     <form
