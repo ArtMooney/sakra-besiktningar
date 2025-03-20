@@ -30,6 +30,13 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       </h2>
     </div>
 
+    <div class="relative flex w-full justify-end">
+      <ChevronDoubleDownIcon
+        class="mr-4 mb-2 h-12 w-12 max-w-screen-2xl text-white transition-opacity duration-500 ease-in-out"
+        :class="[fadeOutDownIcon && 'opacity-0']"
+      />
+    </div>
+
     <PointBlob
       class="relative mb-32 justify-end pl-4"
       title="Motordrivna portar"
@@ -148,11 +155,6 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
         ],
       },
     ]"
-  />
-
-  <ChevronDoubleDownIcon
-    class="fixed bottom-4 mx-auto ml-4 h-12 w-12 max-w-screen-2xl text-white transition-opacity duration-500 ease-in-out"
-    :class="[fadeOutDownIcon && 'opacity-0']"
   />
 </template>
 
