@@ -26,13 +26,16 @@ import imageLogo from "assets/images/sakra-logo.png";
     <p
       class="bottom-3 col-span-1 mt-10 flex max-w-xl flex-wrap justify-center text-center text-xs leading-5 opacity-40 md:col-span-3 lg:max-w-none"
     >
-      Säkra besiktningar Sverige AB <span class="px-3">|</span> Varlabergsvägen
-      29 <span class="px-3">|</span> 434 39 Kungsbacka
-      <span class="px-3">|</span>
+      <span>Säkra besiktningar Sverige AB</span>
+      <span class="px-3 opacity-35">|</span>
+      <span>Varlabergsvägen 29</span>
+      <span class="px-3 opacity-35">|</span>
+      <span>434 39 Kungsbacka</span>
+      <span class="px-3 opacity-35">|</span>
       <a class="underline hover:opacity-50" href="tel:0760-05 75 15"
         >Tel. 0760-05 75 15</a
       >
-      <span class="px-3">|</span>
+      <span class="px-3 opacity-35">|</span>
       <a
         class="underline hover:opacity-50"
         href="mailto:info@sakrabesiktningar.se"
