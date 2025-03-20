@@ -14,11 +14,26 @@ import imageLogo from "assets/images/sakra-logo.png";
     </router-link>
 
     <div class="flex items-center gap-4">
-      <router-link to="/" class="pt-0.5 hover:underline">Hem</router-link>
-      <router-link to="/tjanster" class="pt-0.5 hover:underline"
+      <router-link
+        to="/"
+        class="pt-0.5 hover:underline"
+        :class="[currentPath === '/' && 'border-t-3 border-t-[#ffc000]']"
+        >Hem
+      </router-link>
+      <router-link
+        to="/tjanster"
+        class="pt-0.5 hover:underline"
+        :class="[
+          currentPath === '/tjanster' && 'border-t-3 border-t-[#ffc000]',
+        ]"
         >Tjänster
       </router-link>
-      <router-link to="/kontakta-oss" class="pt-0.5 hover:underline"
+      <router-link
+        to="/kontakta-oss"
+        class="pt-0.5 hover:underline"
+        :class="[
+          currentPath === '/kontakta-oss' && 'border-t-3 border-t-[#ffc000]',
+        ]"
         >Kontakta oss
       </router-link>
     </div>
@@ -60,5 +75,11 @@ import imageLogo from "assets/images/sakra-logo.png";
 <script>
 export default {
   name: "Footer",
+
+  computed: {
+    currentPath() {
+      return this.$route.path;
+    },
+  },
 };
 </script>

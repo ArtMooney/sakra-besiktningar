@@ -23,7 +23,7 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
     />
 
     <div
-      class="fixed top-0 right-0 bottom-0 left-0 flex flex-col justify-center gap-5 bg-white p-4 pb-10 text-center md:static md:flex-row md:items-center md:bg-transparent md:p-0"
+      class="fixed top-0 right-0 bottom-0 left-0 flex flex-col items-center justify-center gap-5 bg-white p-4 pb-10 text-center md:static md:flex-row md:bg-transparent md:p-0"
       :class="showNavbar ? 'absolute md:flex' : 'hidden md:flex'"
     >
       <XMarkIcon
@@ -32,13 +32,21 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
         class="absolute top-4 right-4 h-8 w-8 cursor-pointer"
       />
 
-      <NuxtLink to="/" @click="showNavbar = false" class="hover:underline">
+      <NuxtLink
+        to="/"
+        @click="showNavbar = false"
+        class="hover:underline"
+        :class="[currentPath === '/' && 'border-t-3 border-t-[#ffc000]']"
+      >
         Hem
       </NuxtLink>
       <NuxtLink
         to="/tjanster"
         @click="showNavbar = false"
         class="hover:underline"
+        :class="[
+          currentPath === '/tjanster' && 'border-t-3 border-t-[#ffc000]',
+        ]"
         >Tjänster
       </NuxtLink>
       <Button
@@ -46,6 +54,10 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
         text="Kontakta oss"
         link="/kontakta-oss"
         type="button"
+        class="w-full"
+        :class="[
+          currentPath === '/kontakta-oss' && 'border-t-3 border-t-[#ffc000]',
+        ]"
       />
     </div>
   </div>
@@ -59,6 +71,12 @@ export default {
     return {
       showNavbar: false,
     };
+  },
+
+  computed: {
+    currentPath() {
+      return this.$route.path;
+    },
   },
 };
 </script>
