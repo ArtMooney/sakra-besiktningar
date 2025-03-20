@@ -150,7 +150,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
   />
 
   <ChevronDoubleDownIcon
-    class="fixed bottom-4 left-4 h-12 w-12 text-white transition-opacity duration-500 ease-in-out"
+    class="fixed bottom-4 mx-auto ml-4 h-12 w-12 max-w-screen-2xl text-white transition-opacity duration-500 ease-in-out"
     :class="[fadeOutDownIcon && 'opacity-0']"
   />
 </template>
