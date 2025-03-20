@@ -144,14 +144,6 @@ import { formCollector } from "../utils/formCollector.js";
       <p>{{ defaultEmailMessage }}</p>
     </div>
   </div>
-
-  <div class="h-auto">
-    <img
-      src="../assets/images/hiss.jpg"
-      alt=""
-      class="relative h-full w-full object-cover"
-    />
-  </div>
 </template>
 
 <script>
