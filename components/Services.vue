@@ -7,7 +7,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     <div
       class="absolute inset-0 -mt-12 flex flex-col items-center overflow-hidden"
     >
-      <picture class="parallax-background">
+      <picture class="parallax-background w-full">
         <source
           media="(max-width: 768px)"
           srcset="../assets/images/modern-office-elevators_mob.jpg"
