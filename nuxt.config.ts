@@ -20,6 +20,17 @@ export default defineNuxtConfig({
       userPass: process.env.NUXT_PUBLIC_USERPASS,
     },
   },
+  modules: ["@nuxtjs/robots", "nuxt-simple-sitemap"],
+  robots: {
+    rules: {
+      userAgent: "*",
+      Allow: "/",
+    },
+  },
+  sitemap: {
+    hostname: "https://sakrabesiktningar.se",
+    gzip: true,
+  },
   app: {
     head: {
       link: [
@@ -38,6 +49,57 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
         { rel: "manifest", href: "/site.webmanifest" },
+        { rel: "canonical", href: "https://sakrabesiktningar.se/" },
+      ],
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      title:
+        "Säkra besiktningar - Ackrediterad besiktning av hissar, portar och lyftanordningar",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Vi utför ackrediterad och oberoende besiktning av hissar, portar och lyftanordningar i Kungsbacka och hela Sverige. Kontakta oss för en säker och pålitlig tjänst.",
+        },
+        {
+          name: "keywords",
+          content:
+            "besiktning, hissar, portar, lyftanordningar, ackrediterad besiktning, Kungsbacka",
+        },
+
+        // Open Graph / Facebook
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://sakrabesiktningar.se/" },
+        {
+          property: "og:title",
+          content: "Säkra besiktningar - Ackrediterad besiktning",
+        },
+        {
+          property: "og:description",
+          content:
+            "Vi utför ackrediterad och oberoende besiktning av hissar, portar och lyftanordningar.",
+        },
+        {
+          property: "og:image",
+          content: "https://sakrabesiktningar.se/og-image.jpg",
+        },
+
+        // Twitter
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:url", content: "https://sakrabesiktningar.se/" },
+        {
+          name: "twitter:title",
+          content: "Säkra besiktningar - Ackrediterad besiktning",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "Vi utför ackrediterad och oberoende besiktning av hissar, portar och lyftanordningar.",
+        },
+        {
+          name: "twitter:image",
+          content: "https://sakrabesiktningar.se/twitter-image.jpg",
+        },
       ],
     },
   },
