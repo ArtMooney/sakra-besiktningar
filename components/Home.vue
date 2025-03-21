@@ -5,19 +5,33 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 <template>
   <div class="relative overflow-hidden pb-64">
     <div class="absolute inset-0 flex items-center overflow-hidden">
-      <img
-        src="../assets/images/sky_3000px.jpg"
-        alt=""
-        class="parallax-background -mt-12 h-full w-full object-cover"
-      />
+      <picture class="parallax-background -mt-12 h-full w-full">
+        <source
+          media="(max-width: 768px)"
+          srcset="../assets/images/sky_1500px.jpg"
+        />
+        <img
+          src="../assets/images/sky_3000px.jpg"
+          alt="background image with a blue sky and some clouds"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </picture>
     </div>
 
     <div class="absolute inset-0 flex items-center overflow-hidden">
-      <img
-        src="../assets/images/flat_clouds.png"
-        alt=""
-        class="parallax-clouds h-full w-full object-cover"
-      />
+      <picture class="parallax-clouds h-full w-full">
+        <source
+          media="(max-width: 768px)"
+          srcset="../assets/images/flat_clouds_mob.png"
+        />
+        <img
+          src="../assets/images/flat_clouds.png"
+          alt="an extra background layer with clouds"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </picture>
     </div>
 
     <div
@@ -27,10 +41,18 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       <p>-Ackrediterad besiktning</p>
     </div>
 
-    <img
-      src="../assets/images/skylift.png"
-      class="relative h-full w-full min-w-[200vw] -translate-x-20 object-cover sm:min-w-0 sm:translate-x-0"
-    />
+    <picture class="relative h-full w-full">
+      <source
+        media="(max-width: 768px)"
+        srcset="../assets/images/skylift_mob.png"
+      />
+      <img
+        src="../assets/images/skylift.png"
+        alt="image of a skylift"
+        class="relative h-full w-full min-w-[200vw] -translate-x-20 object-cover sm:min-w-0 sm:translate-x-0"
+        loading="lazy"
+      />
+    </picture>
 
     <div class="relative right-0 mt-20 flex justify-end pl-4 text-left sm:px-0">
       <div
@@ -46,11 +68,18 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       </div>
     </div>
 
-    <img
-      src="../assets/images/travers.png"
-      alt=""
-      class="relative h-auto w-full object-cover"
-    />
+    <picture class="relative h-auto w-full">
+      <source
+        media="(max-width: 768px)"
+        srcset="../assets/images/travers_mob.png"
+      />
+      <img
+        src="../assets/images/travers.png"
+        alt="an extra background layer with clouds"
+        class="h-auto w-full object-cover"
+        loading="lazy"
+      />
+    </picture>
 
     <div
       class="relative left-0 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"
