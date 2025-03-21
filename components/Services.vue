@@ -7,19 +7,33 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     <div
       class="absolute inset-0 -mt-12 flex flex-col items-center overflow-hidden"
     >
-      <img
-        src="../assets/images/modern-office-elevators.jpg"
-        alt=""
-        class="parallax-background h-[130rem] w-full object-cover sm:h-[130rem]"
-      />
+      <picture class="parallax-background">
+        <source
+          media="(max-width: 768px)"
+          srcset="../assets/images/modern-office-elevators_mob.jpg"
+        />
+        <img
+          src="../assets/images/modern-office-elevators.jpg"
+          alt="an extra background layer with clouds"
+          class="h-[130rem] w-full object-cover sm:h-[130rem]"
+          loading="lazy"
+        />
+      </picture>
     </div>
 
     <div class="absolute inset-0 flex items-center overflow-hidden opacity-30">
-      <img
-        src="../assets/images/flat_clouds.png"
-        alt=""
-        class="parallax-clouds h-full w-full object-cover"
-      />
+      <picture class="parallax-clouds h-full w-full">
+        <source
+          media="(max-width: 768px)"
+          srcset="../assets/images/flat_clouds_mob.png"
+        />
+        <img
+          src="../assets/images/flat_clouds.png"
+          alt="an extra background layer with clouds"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </picture>
     </div>
 
     <div
