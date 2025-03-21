@@ -9,11 +9,18 @@ import { formCollector } from "../utils/formCollector.js";
 <template>
   <div>
     <div class="h-[30vh] min-h-96 w-full md:h-[40vh] lg:h-[60vh]">
-      <img
-        src="../assets/images/portar.jpg"
-        alt=""
-        class="relative h-full w-full object-cover"
-      />
+      <picture class="relative h-full w-full">
+        <source
+          media="(max-width: 768px)"
+          srcset="../assets/images/portar_mob.jpg"
+        />
+        <img
+          src="../assets/images/portar.jpg"
+          alt="an extra background layer with clouds"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </picture>
     </div>
   </div>
 
