@@ -22,10 +22,18 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxtjs/robots", "nuxt-simple-sitemap"],
   robots: {
-    rules: {
-      userAgent: "*",
-      Allow: "/",
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        sitemap: "https://sakrabesiktningar.se/sitemap.xml",
+      },
+      {
+        UserAgent: "*",
+        Disallow: "/",
+        Host: "sakra-besiktningar.pages.dev",
+      },
+    ],
   },
   sitemap: {
     hostname: "https://sakrabesiktningar.se",
