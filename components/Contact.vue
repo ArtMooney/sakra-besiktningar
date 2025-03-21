@@ -23,8 +23,10 @@ import { formCollector } from "../utils/formCollector.js";
     </h2>
 
     <div class="mx-4 p-4 sm:mx-8 md:mx-20 md:p-8 lg:text-center xl:mx-52">
-      <h4 class="font-bold">Kontakta oss för en kostnadsfri offert.</h4>
-      <p>Vi återkommer till er inom kort.</p>
+      <h4 class="font-bold">
+        Välkomna att kontakta oss för offert eller andra frågor.
+      </h4>
+      <p>Vi ser fram emot att höra från er.</p>
     </div>
 
     <form
@@ -36,7 +38,7 @@ import { formCollector } from "../utils/formCollector.js";
       <Input
         name="company"
         type="text"
-        placeholder-text="Företagsnamn:"
+        placeholder-text="Företagsnamn"
         :required="true"
         autocomplete="company"
       />
@@ -44,7 +46,7 @@ import { formCollector } from "../utils/formCollector.js";
       <Input
         name="email"
         type="email"
-        placeholder-text="E-post:"
+        placeholder-text="E-post"
         :required="true"
         autocomplete="email"
       />
@@ -52,9 +54,17 @@ import { formCollector } from "../utils/formCollector.js";
       <Input
         name="phone"
         type="tel"
-        placeholder-text="Telefon:"
+        placeholder-text="Telefon"
         :required="true"
         autocomplete="tel"
+      />
+
+      <Input
+        name="message"
+        type="message"
+        placeholder-text="Meddelande"
+        :required="true"
+        auto-complete="off"
       />
 
       <div class="hidden">
@@ -161,7 +171,7 @@ export default {
         pagename: "",
         amex: "",
       },
-      buttonText: "Begär offert",
+      buttonText: "Skicka",
       defaultEmailMessage: "Något gick fel när formuläret skulle skickas.",
       emailSuccessMessage: `Tack för ert meddelande! Vi återkommer till er snart!`,
       emailErrorMessage:
