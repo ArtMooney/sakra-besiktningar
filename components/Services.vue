@@ -14,7 +14,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
         />
         <img
           src="../assets/images/modern-office-elevators.jpg"
-          alt="an extra background layer with clouds"
+          alt="futuristic background image with lots of elevators"
           class="h-[130rem] w-full object-cover sm:h-[130rem]"
           loading="lazy"
         />
