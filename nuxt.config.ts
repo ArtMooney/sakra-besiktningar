@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxtjs/robots", "nuxt-simple-sitemap", "@nuxt/image"],
   image: {
-    dir: "assets/images",
+    dir: "public",
     format: ["webp", "jpg", "png"],
     quality: 80,
     screens: {
