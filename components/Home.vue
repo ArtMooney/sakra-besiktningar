@@ -18,18 +18,15 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     </div>
 
     <div class="absolute inset-0 flex items-center overflow-hidden">
-      <picture class="parallax-clouds h-full w-full">
-        <source
-          media="(max-width: 768px)"
-          srcset="../assets/images/flat_clouds_mob.png"
-        />
-        <img
-          src="../assets/images/flat_clouds.png"
-          alt="an extra background layer with clouds"
-          class="h-full w-full object-cover"
-          loading="lazy"
-        />
-      </picture>
+      <NuxtImg
+        src="flat_clouds.png"
+        alt="an extra background layer with clouds"
+        class="parallax-clouds h-full w-full object-cover"
+        sizes="1000px md:2000px"
+        width="2000"
+        height="3000"
+        loading="lazy"
+      />
     </div>
 
     <div
@@ -39,18 +36,15 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       <p>-Ackrediterad besiktning</p>
     </div>
 
-    <picture class="relative h-full w-full">
-      <source
-        media="(max-width: 768px)"
-        srcset="../assets/images/skylift_mob.png"
-      />
-      <img
-        src="../assets/images/skylift.png"
-        alt="image of a skylift"
-        class="relative h-full w-full min-w-[200vw] -translate-x-20 object-cover sm:min-w-0 sm:translate-x-0"
-        loading="lazy"
-      />
-    </picture>
+    <NuxtImg
+      src="skylift.png"
+      alt="image of a red skylift towards a blue sky"
+      class="relative h-full w-full min-w-[200vw] -translate-x-20 object-cover sm:min-w-0 sm:translate-x-0"
+      sizes="1000px md:1800px"
+      width="1800"
+      height="1200"
+      loading="lazy"
+    />
 
     <div class="relative right-0 mt-20 flex justify-end pl-4 text-left sm:px-0">
       <div
@@ -66,18 +60,15 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       </div>
     </div>
 
-    <picture class="relative h-auto w-full">
-      <source
-        media="(max-width: 768px)"
-        srcset="../assets/images/travers_mob.png"
-      />
-      <img
-        src="../assets/images/travers.png"
-        alt="an extra background layer with clouds"
-        class="h-auto w-full object-cover"
-        loading="lazy"
-      />
-    </picture>
+    <NuxtImg
+      src="travers.png"
+      alt="image of a red skylift towards a blue sky"
+      class="relative h-auto w-full object-cover"
+      sizes="1000px md:2000px"
+      width="2000"
+      height="934"
+      loading="lazy"
+    />
 
     <div
       class="relative left-0 flex justify-start pr-4 text-left sm:grid-cols-2 sm:px-0"

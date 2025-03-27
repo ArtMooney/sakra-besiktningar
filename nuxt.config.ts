@@ -34,6 +34,7 @@ export default defineNuxtConfig({
       xxl: 1536,
       "2xl": 1536,
     },
+    densities: [1, 2],
     modifiers: {
       format: "webp",
       quality: 80,
