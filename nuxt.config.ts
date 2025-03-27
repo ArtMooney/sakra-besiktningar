@@ -21,6 +21,27 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxtjs/robots", "nuxt-simple-sitemap", "@nuxt/image"],
+  image: {
+    dir: "public",
+    format: ["webp", "jpg", "png"],
+    quality: 80,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      "2xl": 1536,
+    },
+    modifiers: {
+      format: "webp",
+      quality: 80,
+      animated: false,
+    },
+    staticFilename: "[name]-[width]-[height]-[format].[ext]",
+    provider: "ipx",
+  },
   robots: {
     rules: [
       {
