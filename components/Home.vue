@@ -6,7 +6,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
   <div class="relative overflow-hidden pb-64">
     <div class="absolute inset-0 flex items-center overflow-hidden">
       <NuxtImg
-        src="../assets/images/sky_3000px.jpg"
+        src="../images/sky_3000px.jpg"
         alt="background image with a blue sky and some clouds"
         class="parallax-background -mt-12 h-full w-full object-cover"
         sizes="sm:1500px lg:3000px"
