@@ -13,6 +13,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
         width="2000"
         height="3000"
         densities="x1"
+        placeholder
       />
     </div>
 
