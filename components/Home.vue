@@ -5,18 +5,16 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 <template>
   <div class="relative overflow-hidden pb-64">
     <div class="absolute inset-0 flex items-center overflow-hidden">
-      <picture class="parallax-background -mt-12 h-full w-full">
-        <source
-          media="(max-width: 768px)"
-          srcset="../assets/images/sky_1500px.jpg"
-        />
-        <img
-          src="../assets/images/sky_3000px.jpg"
-          alt="background image with a blue sky and some clouds"
-          class="h-full w-full object-cover"
-          loading="lazy"
-        />
-      </picture>
+      <NuxtImg
+        src="../assets/images/sky_3000px.jpg"
+        alt="background image with a blue sky and some clouds"
+        class="parallax-background -mt-12 h-full w-full object-cover"
+        sizes="sm:1500px lg:3000px"
+        width="3000"
+        height="2000"
+        loading="lazy"
+        placeholder
+      />
     </div>
 
     <div class="absolute inset-0 flex items-center overflow-hidden">

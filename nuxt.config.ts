@@ -20,7 +20,12 @@ export default defineNuxtConfig({
       userPass: process.env.NUXT_PUBLIC_USERPASS,
     },
   },
-  modules: ["@nuxtjs/robots", "nuxt-simple-sitemap"],
+  modules: ["@nuxtjs/robots", "nuxt-simple-sitemap", "@nuxt/image"],
+  image: {
+    dir: "assets",
+    staticFilename: "[name]-[width].[ext]",
+    provider: "ipx",
+  },
   robots: {
     rules: [
       {
