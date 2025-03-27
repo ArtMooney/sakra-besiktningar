@@ -23,7 +23,6 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/robots", "nuxt-simple-sitemap", "@nuxt/image"],
   image: {
     dir: "public",
-    domains: "nuxt-image.sakra-besiktningar.pages.dev",
     format: ["webp", "jpg", "png"],
     quality: 80,
     screens: {
