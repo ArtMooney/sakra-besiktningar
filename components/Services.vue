@@ -22,18 +22,15 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     </div>
 
     <div class="absolute inset-0 flex items-center overflow-hidden opacity-30">
-      <picture class="parallax-clouds h-full w-full">
-        <source
-          media="(max-width: 768px)"
-          srcset="../assets/images/flat_clouds_mob.png"
-        />
-        <img
-          src="../assets/images/flat_clouds.png"
-          alt="an extra background layer with clouds"
-          class="h-full w-full object-cover"
-          loading="lazy"
-        />
-      </picture>
+      <NuxtImg
+        src="flat_clouds.png"
+        alt="an extra background layer with clouds"
+        class="parallax-clouds h-full w-full object-cover"
+        sizes="1000px md:2000px"
+        width="2000"
+        height="3000"
+        loading="lazy"
+      />
     </div>
 
     <div
