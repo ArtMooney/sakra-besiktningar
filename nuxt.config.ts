@@ -21,11 +21,6 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxtjs/robots", "nuxt-simple-sitemap", "@nuxt/image"],
-  image: {
-    dir: "assets/images",
-    staticFilename: "[name]-[width].[ext]",
-    provider: "ipx",
-  },
   robots: {
     rules: [
       {
