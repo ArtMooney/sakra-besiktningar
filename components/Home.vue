@@ -25,7 +25,6 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
         sizes="1000px md:2000px"
         width="2000"
         height="3000"
-        loading="lazy"
       />
     </div>
 
@@ -43,7 +42,6 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       sizes="1000px md:1800px"
       width="1800"
       height="1200"
-      loading="lazy"
     />
 
     <div class="relative right-0 mt-20 flex justify-end pl-4 text-left sm:px-0">
