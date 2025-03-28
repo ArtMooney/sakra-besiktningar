@@ -7,18 +7,16 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     <div
       class="absolute inset-0 -mt-12 flex flex-col items-center overflow-hidden"
     >
-      <picture class="parallax-background w-full">
-        <source
-          media="(max-width: 768px)"
-          srcset="../assets/images/modern-office-elevators_mob.jpg"
-        />
-        <img
-          src="../assets/images/modern-office-elevators.jpg"
-          alt="futuristic background image with lots of elevators"
-          class="h-[130rem] w-full object-cover sm:h-[130rem]"
-          loading="lazy"
-        />
-      </picture>
+      <NuxtImg
+        src="modern-office-elevators.jpg"
+        alt="futuristic background image with lots of elevators"
+        class="parallax-background h-[130rem] w-full object-cover sm:h-[130rem]"
+        sizes="1000px md:2000px"
+        width="2000"
+        height="3000"
+        densities="x1"
+        placeholder
+      />
     </div>
 
     <div class="absolute inset-0 flex items-center overflow-hidden opacity-30">
