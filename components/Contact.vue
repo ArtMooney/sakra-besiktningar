@@ -118,6 +118,12 @@ import { formCollector } from "../utils/formCollector.js";
           data-wait="Vänta..."
         />
       </div>
+
+      <p class="mt-6 max-w-2xl text-[12px] text-gray-300">
+        * När du skickar detta formulär vidarebefordras dina uppgifter endast
+        via e-post till Säkra besiktningar för att kunna svara på din förfrågan.
+        Uppgifterna lagras inte på denna webbplats.
+      </p>
     </form>
 
     <div class="mx-4 mt-8 grid gap-4 sm:mx-8 md:mx-20 md:grid-cols-2 xl:mx-52">
