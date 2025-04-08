@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       userPass: process.env.NUXT_PUBLIC_USERPASS,
     },
   },
-  modules: ["@nuxtjs/robots", "nuxt-simple-sitemap", "@nuxt/image"],
+  modules: ["@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image"],
   image: {
     dir: "assets/images",
     format: ["webp", "jpg", "png"],
@@ -51,11 +51,14 @@ export default defineNuxtConfig({
         sitemap: "https://sakrabesiktningar.se/sitemap.xml",
       },
       {
-        UserAgent: "*",
-        Disallow: "/",
-        Host: "sakra-besiktningar.pages.dev",
+        userAgent: "*",
+        disallow: "/",
+        comment:
+          "Disallow all robots on sakra-besiktningar.pages.dev and its subdomains",
       },
     ],
+    disallowNonStandardSchemes: true,
+    sitemap: "https://sakrabesiktningar.se/sitemap.xml",
   },
   sitemap: {
     hostname: "https://sakrabesiktningar.se",
