@@ -13,8 +13,6 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  return { status: "test ok" };
-
   const formData = await readFormData(event);
   const formDataJson = Object.fromEntries(formData);
 
@@ -24,6 +22,8 @@ export default defineEventHandler(async (event) => {
       statusMessage: "No form data provided",
     });
   }
+
+  return { status: "test ok" };
 
   const toOwner = await sendEmail(
     config.emailFrom,
