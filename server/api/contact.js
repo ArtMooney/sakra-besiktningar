@@ -6,14 +6,14 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
   const headers = getHeaders(event);
 
-  return { status: "test ok" };
-
   if (!(await checkLogin(headers, config.userName, config.userPass))) {
     throw createError({
       statusCode: 401,
       statusMessage: "Login failed",
     });
   }
+
+  return { status: "test ok" };
 
   const formData = await readFormData(event);
   const formDataJson = Object.fromEntries(formData);
