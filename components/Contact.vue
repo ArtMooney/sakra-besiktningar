@@ -227,29 +227,32 @@ export default {
         requiredFields(event.target.form) &&
         emailValidator(event.target.form)
       ) {
-        const { data: res, error } = await useLazyFetch("/api/contact", {
-          method: "POST",
-          headers: {
-            Authorization: "Basic " + btoa(this.userName + ":" + this.userPass),
-          },
-          body: formCollector(event.target.form, this.extraFields),
-        });
+        try {
+          const res = await $fetch("/api/contact", {
+            method: "POST",
+            headers: {
+              Authorization:
+                "Basic " + btoa(this.userName + ":" + this.userPass),
+            },
+            body: formCollector(event.target.form, this.extraFields),
+          });
 
-        if (error.value) {
+          if (res && res.status === "ok") {
+            const savedText = this.buttonText;
+            this.buttonText = event.target.dataset.wait;
+
+            setTimeout(() => {
+              this.contactForm = false;
+              this.successMessage = true;
+              this.buttonText = savedText;
+
+              this.$router.push({
+                hash: "#contact",
+              });
+            }, 1500);
+          }
+        } catch (error) {
           this.errorMessage = true;
-        } else if (res.value && res.value.status === "ok") {
-          const savedText = this.buttonText;
-          this.buttonText = event.target.dataset.wait;
-
-          setTimeout(() => {
-            this.contactForm = false;
-            this.successMessage = true;
-            this.buttonText = savedText;
-
-            this.$router.push({
-              hash: "#contact",
-            });
-          }, 1500);
         }
       } else {
         event.target.disabled = false;
