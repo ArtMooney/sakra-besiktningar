@@ -126,6 +126,19 @@ import { formCollector } from "../utils/formCollector.js";
       </p>
     </form>
 
+    <div v-if="successMessage">
+      <div class="mx-4 my-20 mt-8 bg-blue-200 p-8 sm:mx-8 md:mx-20 xl:mx-52">
+        {{ emailSuccessMessage }}
+      </div>
+    </div>
+
+    <div
+      v-if="errorMessage"
+      class="mx-4 my-20 mt-8 bg-pink-100 p-8 sm:mx-8 md:mx-20 xl:mx-52"
+    >
+      <p>{{ defaultEmailMessage }}</p>
+    </div>
+
     <div class="mx-4 mt-8 grid gap-4 sm:mx-8 md:mx-20 md:grid-cols-2 xl:mx-52">
       <div
         class="flex h-full w-full flex-col bg-amber-200 p-4 sm:items-center md:p-8"
@@ -148,19 +161,6 @@ import { formCollector } from "../utils/formCollector.js";
         <p>Varlabergsvägen 29</p>
         <p>434 39 Kungsbacka</p>
       </div>
-    </div>
-
-    <div v-if="successMessage">
-      <div class="mx-4 my-20 mt-8 bg-blue-200 p-8 sm:mx-8 md:mx-20 xl:mx-52">
-        {{ emailSuccessMessage }}
-      </div>
-    </div>
-
-    <div
-      v-if="errorMessage"
-      class="mx-4 my-20 mt-8 bg-pink-100 p-8 sm:mx-8 md:mx-20 xl:mx-52"
-    >
-      <p>{{ defaultEmailMessage }}</p>
     </div>
   </div>
 </template>
