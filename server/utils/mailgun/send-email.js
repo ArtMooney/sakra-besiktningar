@@ -1,9 +1,7 @@
-import { uniBase64 } from "../../utils/uni-base-64.js";
-
 export async function sendEmail(from, to, subject, message, apiKey) {
   let headersList = {
     Accept: "*/*",
-    Authorization: "Basic " + uniBase64("api:" + apiKey),
+    Authorization: "Basic " + btoa("api" + ":" + apiKey),
   };
 
   let bodyContent = new FormData();

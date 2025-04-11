@@ -6,11 +6,6 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event);
   const headers = getHeaders(event);
 
-  return {
-    status: "test ok",
-    config: config,
-  };
-
   if (!(await checkLogin(headers, config.userName, config.userPass))) {
     throw createError({
       statusCode: 401,
@@ -35,8 +30,6 @@ export default defineEventHandler(async (event) => {
     JSON.stringify(formDataJson, null, 2),
     config.mailgunApiKey,
   );
-
-  return { status: "test ok", data: toOwner };
 
   if (!toOwner.id) {
     throw createError({
