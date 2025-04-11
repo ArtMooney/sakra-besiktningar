@@ -3,12 +3,15 @@ import { messageContact } from "../content/message-contact.js";
 import { checkLogin } from "../utils/check-login.js";
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig();
+  const config = useRuntimeConfig(event);
   const headers = getHeaders(event);
+
+  const cloudflareEnv = event.context.cloudflare?.env;
 
   return {
     status: "test ok",
-    data: config,
+    config: config,
+    cloudflareEnv: cloudflareEnv || "Ingen CF env hittades",
   };
 
   if (!(await checkLogin(headers, config.userName, config.userPass))) {

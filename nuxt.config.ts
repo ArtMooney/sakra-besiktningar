@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     emailTo: process.env.NUXT_EMAIL_TO,
     userName: process.env.NUXT_USERNAME,
     userPass: process.env.NUXT_USERPASS,
-    test: process.env.NUXT_TEST,
 
     public: {
       userName: process.env.NUXT_PUBLIC_USERNAME,
