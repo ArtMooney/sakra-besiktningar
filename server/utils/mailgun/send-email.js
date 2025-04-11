@@ -1,7 +1,7 @@
 export async function sendEmail(from, to, subject, message, apiKey) {
   let headersList = {
     Accept: "*/*",
-    Authorization: "Basic " + btoa("api" + ":" + apiKey),
+    Authorization: "Basic " + Buffer.from("api:" + apiKey).toString("base64"),
   };
 
   let bodyContent = new FormData();
