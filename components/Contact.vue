@@ -237,6 +237,8 @@ export default {
             body: formCollector(event.target.form, this.extraFields),
           });
 
+          console.log(res);
+
           if (res && res.status === "ok") {
             const savedText = this.buttonText;
             this.buttonText = event.target.dataset.wait;
