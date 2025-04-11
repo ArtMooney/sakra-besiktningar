@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  nitro: {
+    preset: "cloudflare-pages",
+  },
   runtimeConfig: {
     mailgunApiKey: process.env.NUXT_MAILGUN_API_KEY,
     emailFrom: process.env.NUXT_EMAIL_FROM,
