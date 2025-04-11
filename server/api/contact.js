@@ -31,6 +31,8 @@ export default defineEventHandler(async (event) => {
     config.mailgunApiKey,
   );
 
+  return { status: "test ok", data: toOwner };
+
   if (!toOwner.id) {
     throw createError({
       statusCode: 500,
