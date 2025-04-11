@@ -6,12 +6,6 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
   const headers = getHeaders(event);
 
-  return {
-    status: "test ok",
-    data: config,
-    pass: [env.NUXT_MAILGUN_API_KEY, env.MAILGUN_API_KEY],
-  };
-
   if (!(await checkLogin(headers, config.userName, config.userPass))) {
     throw createError({
       statusCode: 401,
