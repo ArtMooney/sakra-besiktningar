@@ -43,7 +43,7 @@ import { formCollector } from "../utils/formCollector.js";
         type="text"
         placeholder-text="Företagsnamn"
         :required="true"
-        autocomplete="company"
+        autocomplete="organization"
       />
 
       <Input
@@ -67,7 +67,7 @@ import { formCollector } from "../utils/formCollector.js";
         type="message"
         placeholder-text="Meddelande"
         :required="true"
-        auto-complete="off"
+        autocomplete="off"
       />
 
       <div class="hidden">
