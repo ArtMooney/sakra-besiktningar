@@ -23,8 +23,6 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  return { status: "test ok" };
-
   const toOwner = await sendEmail(
     config.emailFrom,
     config.emailTo,
@@ -39,6 +37,8 @@ export default defineEventHandler(async (event) => {
       statusMessage: "Failed to send email to owner",
     });
   }
+
+  return { status: "test ok" };
 
   const toContact = await sendEmail(
     config.emailTo,
