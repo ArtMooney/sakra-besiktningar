@@ -3,7 +3,7 @@ import { messageContact } from "../content/message-contact.js";
 import { checkLogin } from "../utils/check-login.js";
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig(event);
+  const config = useRuntimeConfig();
   const headers = getHeaders(event);
 
   if (!(await checkLogin(headers, config.userName, config.userPass))) {
