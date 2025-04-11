@@ -31,16 +31,12 @@ export default defineEventHandler(async (event) => {
     config.mailgunApiKey,
   );
 
-  return { status: "test ok", data: toOwner };
-
   if (!toOwner.id) {
     throw createError({
       statusCode: 500,
       statusMessage: "Failed to send email to owner",
     });
   }
-
-  return { status: "test ok" };
 
   const toContact = await sendEmail(
     config.emailTo,
