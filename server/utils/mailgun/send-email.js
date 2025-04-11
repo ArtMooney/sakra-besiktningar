@@ -6,7 +6,7 @@ export async function sendEmail(from, to, subject, message, apiKey) {
     Authorization: "Basic " + uniBase64("api:" + apiKey),
   };
 
-  return { status: "test ok", data: headersList };
+  return { status: "test ok", data: apiKey };
 
   let bodyContent = new FormData();
   bodyContent.append("from", from);
