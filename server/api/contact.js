@@ -6,12 +6,9 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event);
   const headers = getHeaders(event);
 
-  const cloudflareEnv = event.context.cloudflare?.env;
-
   return {
     status: "test ok",
     config: config,
-    cloudflareEnv: cloudflareEnv || "Ingen CF env hittades",
   };
 
   if (!(await checkLogin(headers, config.userName, config.userPass))) {
