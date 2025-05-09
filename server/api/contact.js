@@ -37,21 +37,21 @@ export default defineEventHandler(async (event) => {
       statusMessage: "Failed to send email to owner",
     });
   }
-
-  const toContact = await sendEmail(
-    config.emailTo,
-    formDataJson.email,
-    "Tack för att ni kontaktat Säkra besiktningar!",
-    await messageContact(),
-    config.mailgunApiKey,
-  );
-
-  if (!toContact.id) {
-    throw createError({
-      statusCode: 500,
-      statusMessage: "Failed to send email to contact",
-    });
-  }
+  
+  // const toContact = await sendEmail(
+  //   config.emailTo,
+  //   formDataJson.email,
+  //   "Tack för att ni kontaktat Säkra besiktningar!",
+  //   await messageContact(),
+  //   config.mailgunApiKey,
+  // );
+  //
+  // if (!toContact.id) {
+  //   throw createError({
+  //     statusCode: 500,
+  //     statusMessage: "Failed to send email to contact",
+  //   });
+  // }
 
   return { status: "ok" };
 });
