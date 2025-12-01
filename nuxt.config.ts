@@ -2,15 +2,24 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2025-12-01",
+
   devtools: { enabled: true },
+
   css: ["/assets/css/main.css"],
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   nitro: {
-    preset: "cloudflare-pages",
+    preset: "cloudflare_pages",
+    prerender: {
+      crawlLinks: false,
+      ignore: [],
+    },
   },
+
   runtimeConfig: {
     mailgunApiKey: process.env.NUXT_MAILGUN_API_KEY,
     emailFrom: process.env.NUXT_EMAIL_FROM,
@@ -21,54 +30,67 @@ export default defineNuxtConfig({
     public: {
       userName: process.env.NUXT_PUBLIC_USERNAME,
       userPass: process.env.NUXT_PUBLIC_USERPASS,
+      imageBaseUrl: process.env.NUXT_PUBLIC_IMAGE_BASE_URL,
+      publicSiteUrl: process.env.NUXT_PUBLIC_SITE_URL,
     },
   },
+
   modules: ["@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image"],
+
   image: {
-    dir: "assets/images",
-    format: ["webp", "jpg", "png"],
-    quality: 80,
+    provider: "weserv",
+
+    weserv: {
+      baseURL: process.env.NUXT_IMAGE_BASE_URL,
+      modifiers: {
+        format: "webp",
+        quality: 65,
+      },
+    },
+
     screens: {
       xs: 320,
       sm: 640,
       md: 768,
       lg: 1024,
       xl: 1280,
-      xxl: 1536,
       "2xl": 1536,
     },
-    densities: [1, 2],
-    modifiers: {
-      format: "webp",
-      quality: 80,
-      animated: false,
-    },
-    staticFilename: "[name]-[width]-[height]-[format].[ext]",
-    provider: "ipxStatic",
   },
+
   robots: {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-        sitemap: "https://sakrabesiktningar.se/sitemap.xml",
-      },
-      {
-        userAgent: "*",
-        disallow: "/",
-        comment:
-          "Disallow all robots on sakra-besiktningar.pages.dev and its subdomains",
-      },
-    ],
-    disallowNonStandardSchemes: true,
-    sitemap: "https://sakrabesiktningar.se/sitemap.xml",
+    rules: () => {
+      if (process.env.CF_PAGES_BRANCH !== "main") {
+        return [
+          {
+            userAgent: "*",
+            disallow: "/",
+          },
+        ];
+      }
+
+      return [
+        {
+          userAgent: "*",
+          allow: "/",
+        },
+      ];
+    },
   },
+
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || process.env.CF_PAGES_URL,
+  },
+
   sitemap: {
-    hostname: "https://sakrabesiktningar.se",
     gzip: true,
   },
+
   app: {
+    keepalive: true,
     head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
       link: [
         {
           rel: "icon",
@@ -85,58 +107,13 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
         { rel: "manifest", href: "/site.webmanifest" },
-        { rel: "canonical", href: "https://sakrabesiktningar.se/" },
       ],
-      charset: "utf-8",
-      viewport: "width=device-width, initial-scale=1",
-      title:
-        "Säkra besiktningar - Ackrediterad besiktning av hissar, portar och lyftanordningar",
-      meta: [
-        {
-          name: "description",
-          content:
-            "Vi utför ackrediterad och oberoende besiktning av hissar, portar och lyftanordningar i Kungsbacka och hela Sverige. Kontakta oss för en säker och pålitlig tjänst.",
-        },
-        {
-          name: "keywords",
-          content:
-            "besiktning, hissar, portar, lyftanordningar, ackrediterad besiktning, Kungsbacka",
-        },
-
-        // Open Graph / Facebook
-        { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://sakrabesiktningar.se/" },
-        {
-          property: "og:title",
-          content: "Säkra besiktningar - Ackrediterad besiktning",
-        },
-        {
-          property: "og:description",
-          content:
-            "Vi utför ackrediterad och oberoende besiktning av hissar, portar och lyftanordningar.",
-        },
-        {
-          property: "og:image",
-          content: "https://sakrabesiktningar.se/og-image.jpg",
-        },
-
-        // Twitter
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:url", content: "https://sakrabesiktningar.se/" },
-        {
-          name: "twitter:title",
-          content: "Säkra besiktningar - Ackrediterad besiktning",
-        },
-        {
-          name: "twitter:description",
-          content:
-            "Vi utför ackrediterad och oberoende besiktning av hissar, portar och lyftanordningar.",
-        },
-        {
-          name: "twitter:image",
-          content: "https://sakrabesiktningar.se/twitter-image.jpg",
-        },
-      ],
+      // meta: [
+      //   {
+      //     name: "google-site-verification",
+      //     content: "",
+      //   },
+      // ],
     },
   },
 });

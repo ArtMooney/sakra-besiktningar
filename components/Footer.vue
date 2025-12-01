@@ -1,15 +1,18 @@
 <script setup>
 import { HeartIcon } from "@heroicons/vue/24/solid";
-import imageLogo from "assets/images/sakra-logo.png";
 </script>
 
 <template>
   <div class="relative m-6 flex flex-col items-center">
     <router-link to="/">
-      <img
-        :src="imageLogo"
+      <NuxtImg
+        src="sakra-logo.png"
         alt="footer logo"
         class="relative mr-2 mb-4 h-auto w-32"
+        sizes="536px"
+        width="536"
+        height="245"
+        densities="x1"
       />
     </router-link>
 

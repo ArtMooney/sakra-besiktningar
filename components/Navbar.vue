@@ -1,6 +1,5 @@
 <script setup>
 import Button from "./elements/Button.vue";
-import imageLogo from "assets/images/sakra-logo.png";
 import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 </script>
 
@@ -10,10 +9,14 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
     class="relative z-10 flex items-center justify-between bg-white p-4 py-2"
   >
     <router-link to="/">
-      <img
-        :src="imageLogo"
+      <NuxtImg
+        src="sakra-logo.png"
         alt="navbar logo"
         class="h-auto w-24 p-1 md:w-32 md:p-2"
+        sizes="536px"
+        width="536"
+        height="245"
+        densities="x1"
       />
     </router-link>
 

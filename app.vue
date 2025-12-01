@@ -1,4 +1,7 @@
 <script setup>
+const config = useRuntimeConfig();
+const siteUrl = config.public.publicSiteUrl;
+
 useHead({
   htmlAttrs: {
     lang: "sv",
@@ -12,7 +15,12 @@ useHead({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         name: "Säkra besiktningar",
-        image: "https://sakrabesiktningar.se/images/logo.png",
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/images/sakra-logo.png`,
+          width: 536,
+          height: 245,
+        },
         url: "https://sakrabesiktningar.se",
         telephone: "0760-05 75 15",
         email: "info@sakrabesiktningar.se",

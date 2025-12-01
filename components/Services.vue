@@ -21,7 +21,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 
     <div class="absolute inset-0 flex items-center overflow-hidden opacity-30">
       <NuxtImg
-        src="flat_clouds.png"
+        src="flat-clouds.png"
         alt="an extra background layer with clouds"
         class="parallax-clouds h-full w-full object-cover"
         sizes="1000px md:2000px"
