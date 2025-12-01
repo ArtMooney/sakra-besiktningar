@@ -11,18 +11,18 @@
     },
     "dependencies": {
         "@heroicons/vue": "^2.2.0",
-        "@nuxt/image": "^1.10.0",
-        "@nuxtjs/robots": "^5.2.8",
-        "@nuxtjs/sitemap": "^7.2.10",
-        "@tailwindcss/vite": "^4.0.3",
-        "@vueuse/core": "^12.7.0",
-        "nuxt": "^3.15.4",
-        "tailwindcss": "^4.0.3",
+        "@nuxt/image": "^2.0.0",
+        "@nuxtjs/robots": "^5.6.0",
+        "@nuxtjs/sitemap": "^7.4.7",
+        "@tailwindcss/vite": "^4.1.17",
+        "@vueuse/core": "^14.1.0",
+        "nuxt": "^4.2.1",
+        "tailwindcss": "^4.1.17",
         "vue": "latest",
         "vue-router": "latest"
     },
     "devDependencies": {
-        "prettier": "^3.3.3",
-        "prettier-plugin-tailwindcss": "^0.6.8"
+        "prettier": "^3.7.3",
+        "prettier-plugin-tailwindcss": "^0.7.2"
     }
 }
