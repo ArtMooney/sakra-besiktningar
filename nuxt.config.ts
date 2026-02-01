@@ -35,7 +35,14 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image"],
+  modules: [
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap",
+    "@nuxt/image",
+    "unplugin-icons/nuxt",
+    "@pinia/nuxt",
+    "pinia-plugin-persistedstate/nuxt",
+  ],
 
   image: {
     provider: "weserv",
