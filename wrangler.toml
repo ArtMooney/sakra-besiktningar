@@ -1,0 +1,14 @@
+name = "sakra_besiktningar"
+compatibility_date = "2026-02-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sakra_besiktningar"
+database_id = "9afb9893-0b36-4d6b-9bf1-5b685ef0e401"
+migrations_dir = "migrations"
+#remote = true
+
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "sakra-besiktningar"
+remote = true
