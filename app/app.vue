@@ -1,10 +1,10 @@
 <script setup>
-// import { useStaticContentStore } from "~/stores/static-content.js";
+import { useStaticContentStore } from "~/stores/static-content.js";
 
 const config = useRuntimeConfig();
 const imageBaseUrl = config.public.imageBaseUrl;
-// const staticContentStore = useStaticContentStore();
-// await staticContentStore.loadContent();
+const staticContentStore = useStaticContentStore();
+await staticContentStore.loadContent();
 
 useHead({
   script: [
