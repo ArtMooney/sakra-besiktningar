@@ -3,6 +3,7 @@ import { cmsStyles } from "./tailwind.cms.styles.js";
 
 export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+
   theme: {
     extend: {
       fontFamily: {
@@ -11,6 +12,7 @@ export default {
       },
     },
   },
+
   plugins: [
     plugin(function ({ addBase }) {
       addBase({
@@ -50,6 +52,9 @@ export default {
 
     cmsStyles,
   ],
+
+  safelist: ["border-l", "border-white", "pl-3"],
+
   corePlugins: {
     preflight: true,
   },
