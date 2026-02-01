@@ -8,7 +8,7 @@ definePageMeta({
 
 <template>
   <div
-    class="flex h-full w-full grow items-center justify-center bg-neutral-800 text-white"
+    class="cms-admin flex h-full min-h-screen w-full grow items-center justify-center"
   >
     <CmsLogin v-if="!loginStore.isValid" class="mx-auto w-full max-w-7xl" />
     <CmsMain v-if="loginStore.isValid" />
