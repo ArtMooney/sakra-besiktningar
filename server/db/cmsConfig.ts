@@ -37,28 +37,44 @@ const getSeoSchema = () => ({
 });
 
 export const staticContentTypes = {
-  "page - Index": {
-    header: {
+  "component - Home": {
+    heading: {
       title: "text",
       subtitle: "text",
     },
-    videoBlock: {
+    blob1: {
       title: "text",
-      videoLinkSwe: "text",
-      videoLinkEng: "text",
-      poster: "fileImg",
+      content: "textarea",
+    },
+    blob2: {
+      title: "text",
+      content: "textarea",
+    },
+    blob3: {
+      title: "text",
+      content: "textarea",
     },
   },
   "component - Navbar": {
     buttons: {
-      index: "text",
-      mediaProduktion: "text",
-      kollegor: "text",
-      kundutlatanden: "text",
-      varforOss: "text",
-      priser: "text",
-      kontaktaOss: "text",
+      home: "text",
+      services: "text",
+      contactUs: "text",
     },
+  },
+  "component - Footer": {
+    buttons: {
+      home: "text",
+      services: "text",
+      contactUs: "text",
+    },
+  },
+  "component - CompanyInfo": {
+    company: "text",
+    address: "text",
+    address2: "text",
+    phone: "text",
+    email: "text",
   },
   "SEO page - Index": getSeoSchema(),
 };
