@@ -1,5 +1,10 @@
 <script setup>
 import { HeartIcon } from "@heroicons/vue/24/solid";
+
+const staticContentStore = useStaticContentStore();
+const staticContent = computed(
+  () => staticContentStore.getContentByTitle("component - Footer").content,
+);
 </script>
 
 <template>
@@ -21,7 +26,8 @@ import { HeartIcon } from "@heroicons/vue/24/solid";
         to="/"
         class="pt-0.5 hover:underline"
         :class="[currentPath === '/' && 'border-t-3 border-t-[#ffc000]']"
-        >Hem
+      >
+        {{ staticContent.buttons.home }}
       </router-link>
       <router-link
         to="/tjanster"
@@ -29,7 +35,8 @@ import { HeartIcon } from "@heroicons/vue/24/solid";
         :class="[
           currentPath === '/tjanster' && 'border-t-3 border-t-[#ffc000]',
         ]"
-        >Tjänster
+      >
+        {{ staticContent.buttons.services }}
       </router-link>
       <router-link
         to="/kontakta-oss"
@@ -37,29 +44,12 @@ import { HeartIcon } from "@heroicons/vue/24/solid";
         :class="[
           currentPath === '/kontakta-oss' && 'border-t-3 border-t-[#ffc000]',
         ]"
-        >Kontakta oss
+      >
+        {{ staticContent.buttons.contactUs }}
       </router-link>
     </div>
 
-    <p
-      class="bottom-3 col-span-1 mt-10 flex max-w-xl flex-wrap justify-center text-center text-xs leading-5 opacity-40 md:col-span-3 lg:max-w-none"
-    >
-      <span>Säkra besiktningar Sverige AB</span>
-      <span class="px-3 opacity-35">|</span>
-      <span>Varlabergsvägen 29</span>
-      <span class="px-3 opacity-35">|</span>
-      <span>434 39 Kungsbacka</span>
-      <span class="px-3 opacity-35">|</span>
-      <a class="underline hover:opacity-50" href="tel:0760-05 75 15"
-        >Tel. 0760-05 75 15</a
-      >
-      <span class="px-3 opacity-35">|</span>
-      <a
-        class="underline hover:opacity-50"
-        href="mailto:info@sakrabesiktningar.se"
-        >E-post: info@sakrabesiktningar.se</a
-      >
-    </p>
+    <CompanyInfo class="mt-10" />
 
     <div class="my-4 w-1/3 border-t border-gray-300"></div>
 

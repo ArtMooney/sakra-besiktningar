@@ -1,5 +1,10 @@
 <script setup>
 import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
+
+const staticContentStore = useStaticContentStore();
+const staticContent = computed(
+  () => staticContentStore.getContentByTitle("component - Home").content,
+);
 </script>
 
 <template>
@@ -31,8 +36,8 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
     <div
       class="relative flex h-[50vh] flex-col items-center justify-center px-8 text-center text-white"
     >
-      <h1 class="text-4xl md:text-6xl">Säkra besiktningar</h1>
-      <p>-Ackrediterad besiktning</p>
+      <h1 class="text-4xl md:text-6xl">{{ staticContent.heading.title }}</h1>
+      <p>{{ staticContent.heading.subtitle }}</p>
     </div>
 
     <NuxtImg
@@ -48,13 +53,8 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-2/3"
       >
-        <h4 class="font-bold">Besiktning</h4>
-        <p>
-          Vi utför ackrediterad och oberoende besiktning av hissar, portar och
-          lyftanordningar. Vi bidrar till ert arbete med att göra era
-          anordningar säkra, funktionsdugliga samt att de uppfyller gällande
-          krav från lagstiftning.
-        </p>
+        <h4 class="font-bold">{{ staticContent.blob1.title }}</h4>
+        <p v-html="formatText(staticContent.blob1.content)"></p>
       </div>
     </div>
 
@@ -74,11 +74,8 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-1 sm:col-end-1 sm:max-w-2/3"
       >
-        <h4 class="font-bold">Lokal Partner</h4>
-        <p>
-          Genom att anlita Säkra besiktningar så gynnar ni en lokal aktör som
-          prioriterar era behov och levererar pålitliga tjänster.
-        </p>
+        <h4 class="font-bold">{{ staticContent.blob2.title }}</h4>
+        <p v-html="formatText(staticContent.blob2.content)"></p>
       </div>
     </div>
 
@@ -88,11 +85,8 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       <div
         class="flex flex-col gap-2 bg-white p-8 sm:col-start-2 sm:col-end-2 sm:max-w-2/3"
       >
-        <h4 class="font-bold">Personlig Service</h4>
-        <p>
-          Vi erbjuder personlig kontakt och flexibla lösningar anpassade till
-          era behov.
-        </p>
+        <h4 class="font-bold">{{ staticContent.blob3.title }}</h4>
+        <p v-html="formatText(staticContent.blob3.content)"></p>
       </div>
     </div>
 

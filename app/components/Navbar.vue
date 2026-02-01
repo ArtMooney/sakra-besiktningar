@@ -1,6 +1,11 @@
 <script setup>
 import Button from "./elements/Button.vue";
 import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
+
+const staticContentStore = useStaticContentStore();
+const staticContent = computed(
+  () => staticContentStore.getContentByTitle("component - Navbar").content,
+);
 </script>
 
 <template>
@@ -41,7 +46,7 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
         class="hover:underline"
         :class="[currentPath === '/' && 'border-t-3 border-t-[#ffc000]']"
       >
-        Hem
+        {{ staticContent.buttons.home }}
       </NuxtLink>
       <NuxtLink
         to="/tjanster"
@@ -50,11 +55,12 @@ import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
         :class="[
           currentPath === '/tjanster' && 'border-t-3 border-t-[#ffc000]',
         ]"
-        >Tjänster
+      >
+        {{ staticContent.buttons.services }}
       </NuxtLink>
       <Button
         @click="showNavbar = false"
-        text="Kontakta oss"
+        :text="staticContent.buttons.contactUs"
         link="/kontakta-oss"
         type="button"
         class="w-full"

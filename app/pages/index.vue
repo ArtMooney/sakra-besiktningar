@@ -14,6 +14,10 @@ useSeoMeta({
     "Vi utför ackrediterad och oberoende besiktning av hissar, portar och lyftanordningar. Lokal partner med personlig service.",
   twitterImage: "/images/twitter-image-home.jpg",
 });
+
+definePageMeta({
+  ssr: true,
+});
 </script>
 
 <template>
@@ -23,10 +27,5 @@ useSeoMeta({
 <script>
 export default {
   name: "Index",
-  setup() {
-    definePageMeta({
-      ssr: true,
-    });
-  },
 };
 </script>
