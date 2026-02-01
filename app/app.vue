@@ -1,12 +1,12 @@
 <script setup>
+// import { useStaticContentStore } from "~/stores/static-content.js";
+
 const config = useRuntimeConfig();
-const siteUrl = config.public.publicSiteUrl;
+const imageBaseUrl = config.public.imageBaseUrl;
+// const staticContentStore = useStaticContentStore();
+// await staticContentStore.loadContent();
 
 useHead({
-  htmlAttrs: {
-    lang: "sv",
-  },
-
   script: [
     {
       key: "schema-org-data",
@@ -17,7 +17,7 @@ useHead({
         name: "Säkra besiktningar",
         logo: {
           "@type": "ImageObject",
-          url: `${siteUrl}/images/sakra-logo.png`,
+          url: `${imageBaseUrl}/sakra-logo.png`,
           width: 536,
           height: 245,
         },
