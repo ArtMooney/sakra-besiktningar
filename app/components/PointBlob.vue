@@ -3,9 +3,7 @@
     <div class="flex flex-col gap-2 bg-white p-8 sm:max-w-[95%]">
       <h4 v-if="title" class="font-bold">{{ title }}</h4>
 
-      <ul v-if="pointLines" class="flex flex-col space-y-4 leading-normal">
-        <li v-for="line in pointLines">{{ line }}</li>
-      </ul>
+      <p v-html="formatText(text)" class="leading-8"></p>
     </div>
   </div>
 </template>
@@ -19,8 +17,8 @@ export default {
       type: String,
       required: false,
     },
-    pointLines: {
-      type: Array,
+    text: {
+      type: String,
       required: false,
     },
   },
