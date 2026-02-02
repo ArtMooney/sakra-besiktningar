@@ -98,5 +98,55 @@ export const staticContentTypes = {
       address2: "text",
     },
   },
+  "component - Services": {
+    heading: {
+      title: "text",
+    },
+    pointBlock1: {
+      title: "text",
+      text: "textarea",
+    },
+    pointBlock2: {
+      title: "text",
+      text: "textarea",
+    },
+    pointBlock3: {
+      title: "text",
+      text: "textarea",
+    },
+    pointBlock4: {
+      title: "text",
+      text: "textarea",
+    },
+    pointBlock5: {
+      title: "text",
+      text: "textarea",
+    },
+    pointBlock6: {
+      title: "text",
+      text: "textarea",
+    },
+    pointBlock7: {
+      title: "text",
+      text: "textarea",
+    },
+    AccordionsTitle: "text",
+    Accordion1: {
+      title: "text",
+      text: "textarea",
+    },
+    Accordion2: {
+      title: "text",
+      text: "textarea",
+    },
+    Accordion3: {
+      title: "text",
+      text: "textarea",
+    },
+    Accordion4: {
+      title: "text",
+      text: "textarea",
+    },
+  },
   "SEO page - Index": getSeoSchema(),
 };

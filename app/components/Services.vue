@@ -1,5 +1,10 @@
 <script setup>
 import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
+
+const staticContentStore = useStaticContentStore();
+const staticContent = computed(
+  () => staticContentStore.getContentByTitle("component - Services").content,
+);
 </script>
 
 <template>
@@ -35,7 +40,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
       class="relative mt-12 mb-20 flex h-[50vh] flex-col items-center justify-center px-8 text-center"
     >
       <h2 class="bg-white px-20 pt-5 pb-3 text-4xl md:text-6xl">
-        Besiktning av
+        {{ staticContent.heading.title }}
       </h2>
     </div>
 
@@ -48,123 +53,76 @@ import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 
     <PointBlob
       class="relative mb-32 justify-end pl-4"
-      title="Motordrivna portar"
-      :point-lines="[
-        '• Besiktningskrav enligt Boverkets föreskrift BFS 2011:12 med ändringar',
-        '• Krav på första besiktning eller att det framgår av EG-försäkran om överensstämmelse att installationen ingår i CE-märkningen',
-        '• Besiktningsintervall 24 månader',
-        '• Omfattar olika typer av motordrivna portar så som takskjutportar, vikportar samt grindar',
-        '• Undantaget krav på besiktning är portar i anslutning till småbostadshus',
-      ]"
+      :title="staticContent.pointBlock1.title"
+      :text="formatText(staticContent.pointBlock1.text)"
     />
 
     <PointBlob
       class="relative mb-32 justify-start pr-4"
-      title="Lastbryggor"
-      :point-lines="[
-        '• Besiktningskrav enligt AFS 2023:11',
-        '• Besiktningsintervall 24 månader',
-        '• Första återkommande besiktning är 24 månader efter att anordningen togs i bruk första gången',
-        '• Ofta högt slitage vid regelbunden användning',
-      ]"
+      :title="staticContent.pointBlock2.title"
+      :text="formatText(staticContent.pointBlock2.text)"
     />
 
     <PointBlob
       class="relative mb-32 justify-end pl-4"
-      title="Mobila arbetsplattformar"
-      :point-lines="[
-        '• Besiktningskrav enligt AFS 2023:11',
-        '• Besiktningsintervall: 12 månader',
-        '• Första återkommande besiktning är 12 månader efter att maskinen togs i bruk för första gången',
-      ]"
+      :title="staticContent.pointBlock3.title"
+      :text="formatText(staticContent.pointBlock3.text)"
     />
 
     <PointBlob
       class="relative mb-32 justify-start pr-4"
-      title="Plocktruckar"
-      :point-lines="[
-        '• Besiktningskrav enligt AFS 2023:11',
-        '• Besiktningsintervall 12 månader',
-        '• Första återkommande besiktning 12 månader efter att maskinen togs i bruk för första gången',
-        '• Undantagna för besiktningskrav är plocktruckar vars lyfthöjd understiger 1,2 meter. Krav på periodisk kontroll av kunnig person kvarstår',
-      ]"
+      :title="staticContent.pointBlock4.title"
+      :text="formatText(staticContent.pointBlock4.text)"
     />
 
     <PointBlob
       class="relative mb-32 justify-end pl-4"
-      title="Fordonslyftar"
-      :point-lines="[
-        '• Besiktningskrav enligt AFS 2023:11',
-        '• Besiktningsintervall 12 mån',
-        '• Vår erfarenhet är att fordonslyftar har fler allvarliga brister än andra typer av anordningar. Utför besiktning för att uppfylla lagkraven samt bidra till en säkrare arbetsplats',
-        '• Undantagna kravet på besiktning är fordonslyftar vilka inte är avsedda för arbete där arbetstagaren befinner sig under fordonet. Krav på periodisk kontroll av kunnig person kvarstår',
-      ]"
+      :title="staticContent.pointBlock5.title"
+      :text="formatText(staticContent.pointBlock5.text)"
     />
   </div>
 
   <PointBlock
-    title="Kranar"
-    :point-lines="[
-      '• Besiktningskrav enligt AFS 2023:11',
-      '• Besiktningsintervall 12 mån',
-      '• Arbete med kranar innebär ofta att tung last hanteras nära arbetstagare. En felfunktion av kranen kan därför leda till allvarliga konsekvenser',
-      '• Kranar omfattar telfer på balk, svängkran på vägg, pelarsvängkran, traverssystem med mera',
-      '• Definition av kran: En lyftanordning där lasten med hjälp av ett icke styrt lastbärande organ kan lyftas och sänkas vertikalt och dessutom förflyttas horisontellt.',
-      '• Undantagna kravet på montagebesiktning är kranar som flyttas horisontellt med handkraft',
-      '• Undantagna kravet på samtliga besiktningar är kranar vars maxlast understiger 500 kg. Krav på periodisk kontroll av kunnig person kvarstår',
-      '• Vi utför även frivillig besiktning av kranar med maxlast understigande 500 kg för att ni ska uppfylla kravet på periodisk kontroll och bidra till en säkrare arbetsplats. (Besiktningstjänsten faller inte under företagets ackreditering av Swedac då besiktningen är frivillig.)',
-    ]"
+    :title="staticContent.pointBlock6.title"
+    :text="formatText(staticContent.pointBlock6.text)"
   />
 
   <PointBlock
-    title="Hissar"
-    :point-lines="[
-      '• Återkommande besiktning av hissar så som personhissar, varuhissar eller plattformshissar med mera',
-      '• Besiktningsintervall 12 – 24 månader',
-    ]"
+    :title="staticContent.pointBlock7.title"
+    :text="formatText(staticContent.pointBlock7.text)"
   />
 
-  <PointBlock
-    title="Övriga besiktningstjänster"
-    :point-lines="[
-      {
-        accordionTitle: '<b>Lingångar och punktlyftar</b>',
-        accordionLines: [
-          '• Besiktningskrav enligt AFS 2023:11',
-          '• Besiktningsintervall',
-          '--- Maskindriven: 12 månaders',
-          '--- Handdriven: 36 månaders',
-        ],
-      },
-      '<br />',
-      {
-        accordionTitle:
-          '<b>Tillfälligt personlyft med truck och arbetskorg</b>',
-        accordionLines: [
-          '• Besiktningskrav enligt AFS 2023:11',
-          '• Krav på första besiktning för att säkerställa att trucken och korgen är säkra att kombinera för tillfälligt personlyft enligt gällande föreskrift',
-          '• Inget krav på återkommande besiktning. Krav på periodisk kontroll av kunnig person kvarstår',
-        ],
-      },
-      '<br />',
-      {
-        accordionTitle: '<b>Lyftbord</b>',
-        accordionLines: [
-          '• Inget besiktningskrav men krav finns på periodisk kontroll. (Besiktningstjänsten faller inte under företagets ackreditering av Swedac då besiktningen är frivillig.)',
-          '• Lämpligt intervall 12 månader',
-        ],
-      },
-      '<br />',
-      {
-        accordionTitle: '<b>Övriga personlyftande anordningar</b>',
-        accordionLines: [
-          '• Besiktningskrav enligt AFS 2023:11',
-          '• Intervall 12 månader',
-          '• Undantagna kravet på besiktning är övriga lyftanordningar med en lyfthöjd understigande 0,5 meter',
-        ],
-      },
-    ]"
-  />
+  <div class="relative my-8 w-full border-neutral-200 px-4">
+    <div class="flex flex-col bg-neutral-100 p-8 px-8 shadow-md">
+      <div
+        class="flex cursor-pointer flex-col items-start justify-between gap-5"
+      >
+        <h4 class="mt-2 mb-6 font-bold">
+          {{ staticContent.Accordion1.title }}
+        </h4>
+
+        <Accordion
+          :title="staticContent.Accordion1.title"
+          :text="formatText(staticContent.Accordion1.text)"
+        />
+
+        <Accordion
+          :title="staticContent.Accordion2.title"
+          :text="formatText(staticContent.Accordion2.text)"
+        />
+
+        <Accordion
+          :title="staticContent.Accordion3.title"
+          :text="formatText(staticContent.Accordion3.text)"
+        />
+
+        <Accordion
+          :title="staticContent.Accordion4.title"
+          :text="formatText(staticContent.Accordion4.text)"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
