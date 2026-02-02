@@ -76,5 +76,27 @@ export const staticContentTypes = {
     phone: "text",
     email: "text",
   },
+  "component - Contact": {
+    heading: {
+      title: "text",
+    },
+    formTitleBlock: {
+      title: "text",
+      text: "textarea",
+    },
+    contactTel: {
+      text: "text",
+      phone: "text",
+    },
+    contactEmail: {
+      text: "text",
+      email: "text",
+    },
+    contactAddress: {
+      title: "text",
+      address: "text",
+      address2: "text",
+    },
+  },
   "SEO page - Index": getSeoSchema(),
 };
