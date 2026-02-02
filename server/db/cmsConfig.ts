@@ -149,4 +149,6 @@ export const staticContentTypes = {
     },
   },
   "SEO page - Index": getSeoSchema(),
+  "SEO page - Services": getSeoSchema(),
+  "SEO page - Contact": getSeoSchema(),
 };
