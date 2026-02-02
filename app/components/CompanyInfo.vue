@@ -14,9 +14,9 @@ const staticContent = computed(
     <p>{{ staticContent.address }}</p>
     <p>{{ staticContent.address2 }}</p>
     <a :href="`tel:${staticContent.phone}`">Tel. {{ staticContent.phone }}</a>
-    <a :href="`mailto:${staticContent.email}`"
-      >E-post: {{ staticContent.email }}</a
-    >
+    <a :href="`mailto:${staticContent.email}`">
+      E-post: {{ staticContent.email }}
+    </a>
   </div>
 </template>
 
