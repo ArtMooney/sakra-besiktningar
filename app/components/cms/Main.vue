@@ -1,7 +1,7 @@
 <template>
   <Teleport to="body">
     <div
-      class="cms-admin absolute top-0 left-0 z-20 min-h-screen w-full min-w-75 bg-[#363636] px-4 pb-24"
+      class="cms-admin fixed inset-0 z-20 w-full min-w-75 bg-[#363636] px-4 pb-24"
     >
       <CmsNavbar />
       <CmsTableList />
