@@ -11,4 +11,4 @@ migrations_dir = "migrations"
 [[r2_buckets]]
 binding = "FILES"
 bucket_name = "sakra-besiktningar"
-#remote = true
+remote = true
