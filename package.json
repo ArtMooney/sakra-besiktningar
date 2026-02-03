@@ -23,7 +23,9 @@
     "db:import:dev": "wrangler d1 execute sakra_besiktningar_dev --remote --file=sakra_besiktningar-backup-inserts.sql",
     "db:push": "npm run db:extract:local && npm run db:import",
     "db:pull": "npm run db:extract && npm run db:import:local",
-    "db:extract:table:local": "./scripts/extract-table.sh database_name table_name exported_table.sql"
+    "db:extract:table:local": "./scripts/extract-table.sh database_name table_name exported_table.sql",
+    "r2:download": "./scripts/sync-r2.sh",
+    "r2:upload": "./scripts/upload-r2.sh"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
