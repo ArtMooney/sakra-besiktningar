@@ -1,9 +1,8 @@
 <script setup>
-import Button from "./elements/Button.vue";
-import Input from "./elements/Input.vue";
-import { requiredFields } from "../utils/requiredFields.js";
-import { emailValidator } from "../utils/emailValidator.js";
-import { formCollector } from "../utils/formCollector.js";
+const staticContentStore = useStaticContentStore();
+const staticContent = computed(
+  () => staticContentStore.getContentByTitle("component - Contact").content,
+);
 </script>
 
 <template>
@@ -22,101 +21,75 @@ import { formCollector } from "../utils/formCollector.js";
 
   <div id="contact" class="py-20 md:py-32">
     <h2 class="mb-24 w-full px-4 text-center text-4xl md:text-6xl lg:mb-32">
-      Kontakta oss
+      {{ staticContent.heading.title }}
     </h2>
 
     <div class="mx-4 p-4 sm:mx-8 md:mx-20 md:p-8 lg:text-center xl:mx-52">
       <h4 class="font-bold">
-        Välkomna att kontakta oss för offert eller andra frågor.
+        {{ staticContent.formTitleBlock.title }}
       </h4>
-      <p>Vi ser fram emot att höra från er.</p>
+      <p v-html="formatText(staticContent.formTitleBlock.text)"></p>
     </div>
 
     <form
       v-if="contactForm"
       @submit.prevent
       name="contact"
-      class="mx-4 bg-gray-50 p-4 sm:mx-8 md:mx-20 md:p-8 xl:mx-52"
+      class="mx-4 flex flex-col gap-4 bg-gray-50 p-4 sm:mx-8 md:mx-20 md:p-8 xl:mx-52"
     >
-      <Input
+      <input
         name="company"
         type="text"
-        placeholder-text="Företagsnamn"
-        :required="true"
+        placeholder="Företagsnamn"
+        required
         autocomplete="organization"
+        class="w-full"
       />
 
-      <Input
+      <input
         name="email"
         type="email"
-        placeholder-text="E-post"
-        :required="true"
+        placeholder="E-post"
+        required
         autocomplete="email"
+        class="w-full"
       />
 
-      <Input
+      <input
         name="phone"
         type="tel"
-        placeholder-text="Telefon"
-        :required="true"
+        placeholder="Telefon"
+        required
         autocomplete="tel"
+        class="w-full"
       />
 
-      <Input
+      <textarea
         name="message"
-        type="message"
-        placeholder-text="Meddelande"
-        :required="true"
+        type="text"
+        maxlength="5000"
+        placeholder="Meddelande"
+        required
         autocomplete="off"
+        class="w-full"
       />
 
       <div class="hidden">
-        <Input
-          name="clientip"
-          type="text"
-          placeholder-text="clientip"
-          :required="false"
-          label-text=""
-          v-model="extraFields.clientip"
-        />
-
-        <Input
-          name="pageuri"
-          type="text"
-          placeholder-text="pageuri"
-          :required="false"
-          label-text=""
-          v-model="extraFields.pageuri"
-        />
-
-        <Input
-          name="pagename"
-          type="text"
-          placeholder-text="pagename"
-          :required="false"
-          label-text=""
-          v-model="extraFields.pagename"
-        />
-
-        <Input
-          name="amex"
-          type="text"
-          placeholder-text="amex"
-          :required="false"
-          label-text=""
-          v-model="extraFields.amex"
-        />
+        <input name="clientip" type="text" v-model="extraFields.clientip" />
+        <input name="pageuri" type="text" v-model="extraFields.pageuri" />
+        <input name="pagename" type="text" v-model="extraFields.pagename" />
+        <input name="amex" type="text" v-model="extraFields.amex" />
       </div>
 
       <div class="flex justify-start pt-8">
-        <Button
+        <button
+          class="primary"
           @click="sendForm"
-          :text="buttonText"
-          link=""
-          hash=""
           type="submit"
           data-wait="Vänta..."
-        />
+        >
+          {{ buttonText }}
+        </button>
       </div>
 
       <p class="mt-6 max-w-2xl text-[12px] text-gray-300">
@@ -143,23 +116,28 @@ import { formCollector } from "../utils/formCollector.js";
       <div
         class="flex h-full w-full flex-col bg-amber-200 p-4 sm:items-center md:p-8"
       >
-        <p>Telefon:</p>
-        <a class="underline" href="tel:0760-05 75 15">0760-05 75 15</a>
+        <p>{{ staticContent.contactTel.text }}</p>
+        <a class="underline" :href="`tel:${staticContent.contactTel.phone}`">{{
+          staticContent.contactTel.phone
+        }}</a>
       </div>
       <div
         class="flex h-full w-full flex-col bg-amber-200 p-4 sm:items-center md:p-8"
       >
-        <p>E-post:</p>
-        <a class="underline" href="mailto:info@sakrabesiktningar.se"
-          >info@sakrabesiktningar.se</a
+        <p>{{ staticContent.contactEmail.text }}</p>
+        <a
+          class="underline"
+          :href="`mailto:${staticContent.contactEmail.email}`"
+        >
+          {{ staticContent.contactEmail.email }}</a
         >
       </div>
       <div
         class="flex h-full w-full flex-col bg-amber-200 p-4 sm:items-center md:col-span-2 md:p-8"
       >
-        <p>Adress:</p>
-        <p>Varlabergsvägen 29</p>
-        <p>434 39 Kungsbacka</p>
+        <p>{{ staticContent.contactAddress.title }}</p>
+        <p>{{ staticContent.contactAddress.address }}</p>
+        <p>{{ staticContent.contactAddress.address2 }}</p>
       </div>
     </div>
   </div>

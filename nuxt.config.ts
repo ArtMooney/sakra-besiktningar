@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2025-12-01",
+  compatibilityDate: "2026-02-01",
 
   devtools: { enabled: true },
 
@@ -35,7 +35,14 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image"],
+  modules: [
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap",
+    "@nuxt/image",
+    "unplugin-icons/nuxt",
+    "@pinia/nuxt",
+    "pinia-plugin-persistedstate/nuxt",
+  ],
 
   image: {
     provider: "weserv",
@@ -89,6 +96,9 @@ export default defineNuxtConfig({
   app: {
     keepalive: true,
     head: {
+      htmlAttrs: {
+        lang: "sv-SE",
+      },
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       link: [

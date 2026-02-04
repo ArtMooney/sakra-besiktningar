@@ -3,9 +3,7 @@
     <div class="flex flex-col gap-2 bg-white p-8 sm:max-w-[95%]">
       <h4 v-if="title" class="font-bold">{{ title }}</h4>
 
-      <ul v-if="pointLines" class="flex flex-col space-y-4 leading-normal">
-        <li v-for="line in pointLines">{{ line }}</li>
-      </ul>
+      <div v-html="splitText(text)" class="[&_p]:mb-4"></div>
     </div>
   </div>
 </template>
@@ -19,9 +17,20 @@ export default {
       type: String,
       required: false,
     },
-    pointLines: {
-      type: Array,
+    text: {
+      type: String,
       required: false,
+    },
+  },
+
+  methods: {
+    splitText(text) {
+      const lines = formatText(text).split("<br>");
+      const elements = lines.map(
+        (line) => `<p >${line.replace(/\*/g, "•")}</p>`,
+      );
+
+      return elements.join("");
     },
   },
 };
