@@ -15,7 +15,7 @@ const staticContent = computed(
       <NuxtImg
         src="modern-office-elevators.jpg"
         alt="futuristic background image with lots of elevators"
-        class="parallax-background h-[130rem] w-full object-cover sm:h-[130rem]"
+        class="parallax-background h-520 w-full object-cover sm:h-520"
         sizes="1000px md:2000px"
         width="2000"
         height="3000"
