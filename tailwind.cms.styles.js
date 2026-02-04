@@ -3,7 +3,7 @@ import plugin from "tailwindcss/plugin";
 export const cmsStyles = plugin(function ({ addBase }) {
   addBase({
     ".cms-admin": {
-      "@apply mx-auto w-full max-w-screen-2xl bg-neutral-900 font-body font-normal text-white overflow-x-hidden":
+      "@apply mx-auto w-full bg-neutral-900 font-body font-normal text-white overflow-x-hidden":
         {},
 
       "& h1, & .h1, & h2, & .h2, & h3, & .h3, & h4, & .h4, & h5, & .h5, & h6, & .h6":
