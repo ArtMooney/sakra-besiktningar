@@ -1,5 +1,4 @@
 <script setup>
-import Button from "./elements/Button.vue";
 import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 
 const staticContentStore = useStaticContentStore();
@@ -58,16 +57,18 @@ const staticContent = computed(
       >
         {{ staticContent.buttons.services }}
       </NuxtLink>
-      <Button
-        @click="showNavbar = false"
-        :text="staticContent.buttons.contactUs"
-        link="/kontakta-oss"
-        type="button"
-        class="w-full"
-        :class="[
-          currentPath === '/kontakta-oss' && 'border-t-3 border-t-[#ffc000]',
-        ]"
-      />
+
+      <NuxtLink to="/kontakta-oss">
+        <button
+          @click="showNavbar = false"
+          :class="[
+            'primary whitespace-nowrap',
+            currentPath === '/kontakta-oss' && 'border-t-3 border-t-[#ffc000]',
+          ]"
+        >
+          {{ staticContent.buttons.contactUs }}
+        </button>
+      </NuxtLink>
     </div>
   </div>
 </template>

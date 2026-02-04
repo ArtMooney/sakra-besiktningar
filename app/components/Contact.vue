@@ -1,7 +1,4 @@
 <script setup>
-import Button from "./elements/Button.vue";
-import Input from "./elements/Input.vue";
-
 const staticContentStore = useStaticContentStore();
 const staticContent = computed(
   () => staticContentStore.getContentByTitle("component - Contact").content,
@@ -38,87 +35,61 @@ const staticContent = computed(
       v-if="contactForm"
       @submit.prevent
       name="contact"
-      class="mx-4 bg-gray-50 p-4 sm:mx-8 md:mx-20 md:p-8 xl:mx-52"
+      class="mx-4 flex flex-col gap-4 bg-gray-50 p-4 sm:mx-8 md:mx-20 md:p-8 xl:mx-52"
     >
-      <Input
+      <input
         name="company"
         type="text"
-        placeholder-text="Företagsnamn"
-        :required="true"
+        placeholder="Företagsnamn"
+        required
         autocomplete="organization"
+        class="w-full"
       />
 
-      <Input
+      <input
         name="email"
         type="email"
-        placeholder-text="E-post"
-        :required="true"
+        placeholder="E-post"
+        required
         autocomplete="email"
+        class="w-full"
       />
 
-      <Input
+      <input
         name="phone"
         type="tel"
-        placeholder-text="Telefon"
-        :required="true"
+        placeholder="Telefon"
+        required
         autocomplete="tel"
+        class="w-full"
       />
 
-      <Input
+      <textarea
         name="message"
-        type="message"
-        placeholder-text="Meddelande"
-        :required="true"
+        type="text"
+        maxlength="5000"
+        placeholder="Meddelande"
+        required
         autocomplete="off"
+        class="w-full"
       />
 
       <div class="hidden">
-        <Input
-          name="clientip"
-          type="text"
-          placeholder-text="clientip"
-          :required="false"
-          label-text=""
-          v-model="extraFields.clientip"
-        />
-
-        <Input
-          name="pageuri"
-          type="text"
-          placeholder-text="pageuri"
-          :required="false"
-          label-text=""
-          v-model="extraFields.pageuri"
-        />
-
-        <Input
-          name="pagename"
-          type="text"
-          placeholder-text="pagename"
-          :required="false"
-          label-text=""
-          v-model="extraFields.pagename"
-        />
-
-        <Input
-          name="amex"
-          type="text"
-          placeholder-text="amex"
-          :required="false"
-          label-text=""
-          v-model="extraFields.amex"
-        />
+        <input name="clientip" type="text" v-model="extraFields.clientip" />
+        <input name="pageuri" type="text" v-model="extraFields.pageuri" />
+        <input name="pagename" type="text" v-model="extraFields.pagename" />
+        <input name="amex" type="text" v-model="extraFields.amex" />
       </div>
 
       <div class="flex justify-start pt-8">
-        <Button
+        <button
+          class="primary"
           @click="sendForm"
-          :text="buttonText"
-          link=""
-          hash=""
           type="submit"
           data-wait="Vänta..."
-        />
+        >
+          {{ buttonText }}
+        </button>
       </div>
 
       <p class="mt-6 max-w-2xl text-[12px] text-gray-300">
