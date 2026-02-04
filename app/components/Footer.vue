@@ -29,6 +29,7 @@ const staticContent = computed(
       >
         {{ staticContent.buttons.home }}
       </router-link>
+
       <router-link
         to="/tjanster"
         class="pt-0.5 hover:underline"
@@ -38,6 +39,7 @@ const staticContent = computed(
       >
         {{ staticContent.buttons.services }}
       </router-link>
+
       <router-link
         to="/kontakta-oss"
         class="pt-0.5 hover:underline"
@@ -46,6 +48,14 @@ const staticContent = computed(
         ]"
       >
         {{ staticContent.buttons.contactUs }}
+      </router-link>
+
+      <router-link
+        to="/admin"
+        class="pt-0.5 hover:underline"
+        :class="[currentPath === '/admin' && 'border-t-3 border-t-[#ffc000]']"
+      >
+        Admin
       </router-link>
     </div>
 
