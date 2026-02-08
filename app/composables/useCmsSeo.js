@@ -17,7 +17,7 @@ export const useCmsSeo = (seoContentTitle) => {
       `${imageBaseUrl}/cms-files/${staticContentSEO.value.ogImage}`,
     ogUrl: `${publicSiteUrl}`,
     ogType: "website",
-    ogSiteName: "Adinq",
+    ogSiteName: "Säkra besiktningar",
     ogLocale: "sv_SE",
     twitterCard: "summary_large_image",
     twitterTitle: () => staticContentSEO.value.twitterTitle,
@@ -25,6 +25,6 @@ export const useCmsSeo = (seoContentTitle) => {
     twitterImage: () =>
       `${imageBaseUrl}/cms-files/${staticContentSEO.value.twitterImage}`,
     robots: "index, follow",
-    author: "Adinq",
+    author: "Säkra besiktningar",
   });
 };
