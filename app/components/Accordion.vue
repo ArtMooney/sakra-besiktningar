@@ -1,5 +1,5 @@
 <script setup>
-import { ChevronDownIcon } from "@heroicons/vue/24/solid";
+import IconChevronDown from "~icons/gg/chevron-down";
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import { ChevronDownIcon } from "@heroicons/vue/24/solid";
       <div class="mb-1 flex items-center justify-center gap-2">
         <p v-html="title" class="font-semibold select-none"></p>
 
-        <ChevronDownIcon
+        <IconChevronDown
           class="size-5 shrink-0 transition-transform duration-200 ease-in-out"
           :class="[accordionOpen && 'rotate-180']"
         />

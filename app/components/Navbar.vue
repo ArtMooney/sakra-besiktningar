@@ -1,5 +1,6 @@
 <script setup>
-import { Bars2Icon, XMarkIcon } from "@heroicons/vue/24/solid";
+import IconBars from "~icons/heroicons/bars-2";
+import IconXmark from "~icons/heroicons/x-mark";
 
 const staticContentStore = useStaticContentStore();
 const staticContent = computed(
@@ -24,19 +25,19 @@ const staticContent = computed(
       />
     </router-link>
 
-    <Bars2Icon
+    <IconBars
       @click="showNavbar = !showNavbar"
-      class="block h-8 w-8 cursor-pointer md:hidden"
+      class="block size-8 cursor-pointer md:hidden"
     />
 
     <div
       class="fixed top-0 right-0 bottom-0 left-0 flex flex-col items-center justify-center gap-5 bg-white p-4 pb-10 text-center md:static md:flex-row md:bg-transparent md:p-0"
       :class="showNavbar ? 'absolute md:flex' : 'hidden md:flex'"
     >
-      <XMarkIcon
+      <IconXmark
         v-if="showNavbar"
         @click="showNavbar = !showNavbar"
-        class="absolute top-4 right-4 h-8 w-8 cursor-pointer"
+        class="absolute top-4 right-4 size-8 cursor-pointer"
       />
 
       <NuxtLink

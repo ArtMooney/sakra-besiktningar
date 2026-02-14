@@ -1,5 +1,5 @@
 <script setup>
-import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
+import IconChevronDoubleDown16 from "~icons/qlementine-icons/chevron-double-down-16";
 
 const staticContentStore = useStaticContentStore();
 const staticContent = computed(
@@ -90,8 +90,8 @@ const staticContent = computed(
       </div>
     </div>
 
-    <ChevronDoubleDownIcon
-      class="fixed bottom-4 mx-auto ml-4 h-12 w-12 max-w-screen-2xl text-white transition-opacity duration-500 ease-in-out"
+    <IconChevronDoubleDown16
+      class="fixed bottom-4 mx-auto ml-4 size-12 max-w-screen-2xl text-white transition-opacity duration-500 ease-in-out"
       :class="[fadeOutDownIcon && 'opacity-0']"
     />
   </div>

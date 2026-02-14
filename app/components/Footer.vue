@@ -1,5 +1,5 @@
 <script setup>
-import { HeartIcon } from "@heroicons/vue/24/solid";
+import IconEmojioneV1GrowingHeart from "~icons/emojione-v1/growing-heart";
 
 const staticContentStore = useStaticContentStore();
 const staticContent = computed(
@@ -69,7 +69,11 @@ const staticContent = computed(
       target="_blank"
     >
       Powered by
-      <span><HeartIcon class="h-4 w-4 px-0.5 text-red-600"></HeartIcon></span>
+      <span>
+        <IconEmojioneV1GrowingHeart
+          class="size-4 px-0.5"
+        ></IconEmojioneV1GrowingHeart>
+      </span>
       FrameCore
     </a>
   </div>
